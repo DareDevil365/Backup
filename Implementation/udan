@@ -1,0 +1,114 @@
+# 🛫 Upgraded Flight Price Predictor - Comprehensive Enhancements Plan
+
+This plan incorporates all eight advanced ideas across Niche Feature Engineering, Scraping & Pipeline Enhancements, Model Architecture Upgrades, and Self-Improving Error Attribution.
+
+## User Review Required
+
+> [!IMPORTANT]
+> **External API and Crawler Fallbacks**: Since live systems (ConfirmTkt/Ixigo/OTAs) deploy bot detection, all crawlers will run through our stealth browser factory. If a crawler times out or is blocked, the engine will degrade gracefully to high-fidelity simulators that generate realistic values (e.g. waitlist sizes, seat counts, dynamic pricing differentials) to prevent pipeline failures.
+>
+> **Proxy Requirements**: Geo-location proxy comparisons require active proxies mapped to Tier 1 and Tier 3 Indian cities. If these are unavailable in the environment, the system will mock regional price differentials using static pricing profiles.
+
+## Open Questions
+
+> [!IMPORTANT]
+> 1. **Optuna Retraining Time**: Running Optuna for hyperparameter optimization on startup could add 1–2 minutes of latency. We recommend executing the tuning loop asynchronously in a background thread upon startup so it does not block the main process.
+> 2. **Feedback Loop Auto-Adjustment**: For root cause error classification, we propose automatically adjusting XGBoost feature weights by logging errors to a weights configuration table in SQLite, which the feature pipeline reads. Let us know if you prefer a different mechanism.
+
+---
+
+## Proposed Changes
+
+We will implement the enhancements across the existing backend files, adding new modules as needed.
+
+```mermaid
+graph TD
+    A[main.py Background Loop] -->|Hourly Sweep + Volatility Triggers| B[watchlist & searches]
+    B -->|Trigger Parallel Proxies| C[dispatcher.py]
+    D[price_predictor.py] -->|1. Get Route MAPE & Error Attribution| E[predictor/storage.py]
+    D -->|2. Evaluate Sigmoid Rules| F[predictor/rules.py]
+    D -->|3. Compile Features & Train Waitlist| G[predictor/pipeline.py]
+    G -->|Scrape Train Waitlist| H[workers/irctc_scraper.py]
+    E -->|Weekly Tuning via Optuna| I[predictor/models.py]
+```
+
+---
+
+### 1. Niche Feature Engineering (Data-Level)
+
+#### [NEW] [irctc_scraper.py](file:///c:/Users/yasha/Desktop/Flight%20Finder/backend/workers/irctc_scraper.py)
+- **IRCTC Railway Pressure Index**:
+  - Map flight routes (e.g. `DEL-PAT` or `BOM-DEL`) to major rail connections (e.g., New Delhi `NDLS` to Patna `PNBE`, Mumbai `MMCT` to New Delhi `NDLS`).
+  - Perform public queries to fetch train waitlist sizes (specifically for 3A/2A classes on Rajdhani/Shatabdi trains).
+  - Calculate `railway_pressure_index` as:
+    $$\text{Index} = \min\left(1.0, \frac{\text{max}(\text{waitlist\_count} - 50, 0)}{200}\right)$$
+  - Add this index to the feature pipeline. When waitlist is $>200$, the index is $1.0$, indicating panic-buying pressure.
+
+#### [MODIFY] [pipeline.py](file:///c:/Users/yasha/Desktop/Flight%20Finder/backend/predictor/pipeline.py)
+- **Bridge Day Coefficient Multiplication**:
+  - If a public holiday is on a Thursday or Tuesday, identify the adjacent Friday or Monday as a bridge day.
+  - Apply a $3\times$ surge multiplier coefficient to the calendar holiday demand weight for that bridge day to model extended weekend demand.
+- **Cheapest Fare Bucket Seat Count**:
+  - Update `compile_feature_vector` to fetch and store seat counts specifically for the cheapest fare bucket (e.g., Indigo Saver vs Flexi).
+
+---
+
+### 2. Scraping & Pipeline Enhancements (Data Gathering)
+
+#### [MODIFY] [mock_worker.py](file:///c:/Users/yasha/Desktop/Flight%20Finder/backend/workers/mock_worker.py) & [dispatcher.py](file:///c:/Users/yasha/Desktop/Flight%20Finder/backend/dispatcher.py)
+- Update scraper parsers to capture fare bucket seat counts (e.g., "Saver: 3 seats left, Flexi: 9 seats left").
+- Pass the cheapest fare bucket seat count (`cheapest_bucket_seats`) to the predictor storage and pipeline.
+
+#### [MODIFY] [main.py](file:///c:/Users/yasha/Desktop/Flight%20Finder/backend/main.py)
+- **Dynamic Scraping Cadence (Volatility Triggers)**:
+  - If the database shows `price_velocity` on a route exceeds $10\%$ within a 12-hour window, automatically flag the route for high-frequency scraping (hourly sweeps) for the next 24 hours.
+
+#### [MODIFY] [proxy_manager.py](file:///c:/Users/yasha/Desktop/Flight%20Finder/backend/proxy_manager.py) & [dispatcher.py](file:///c:/Users/yasha/Desktop/Flight%20Finder/backend/dispatcher.py)
+- **Geo-Location Proxy Comparisons**:
+  - Implement parallel search execution using a Tier 1 proxy (e.g., Mumbai IP) and a Tier 3 proxy (e.g., Patna IP).
+  - Compare returned prices and output a `location_price_differential` feature to capture dynamic pricing discrimination.
+
+---
+
+### 3. Model Architecture Upgrades (Algorithm-Level)
+
+#### [MODIFY] [pipeline.py](file:///c:/Users/yasha/Desktop/Flight%20Finder/backend/predictor/pipeline.py)
+- **Cross-Route Transfer Learning (Pooled Mappings)**:
+  - Group routes into segments: `Leisure-Beach` (`DEL-GOI`, `DEL-IXZ`), `Leisure-Hill` (`DEL-SXR`), `Corporate-Metro` (`DEL-BOM`, `BOM-BLR`).
+  - For cold-start routes (under 30 observations), impute seasonal demand curves, baseline prices, and historical percentiles from the pooled route category average.
+
+#### [MODIFY] [models.py](file:///c:/Users/yasha/Desktop/Flight%20Finder/backend/predictor/models.py)
+- **Weekly Hyperparameter Tuning (Optuna)**:
+  - Integrate `optuna` in the weekly training cycle for the global XGBoost model.
+  - Optimize hyperparameters (`max_depth`, `learning_rate`, `n_estimators`, `subsample`) targeting the minimization of the historical Mean Absolute Percentage Error (MAPE) on validation routes.
+
+---
+
+### 4. Self-Improving Error Attribution (Loop-Level)
+
+#### [MODIFY] [storage.py](file:///c:/Users/yasha/Desktop/Flight%20Finder/backend/predictor/storage.py) & [price_predictor.py](file:///c:/Users/yasha/Desktop/Flight%20Finder/backend/price_predictor.py)
+- **Root Cause Error Classification**:
+  - In the 30-day auditing loop, when MAPE is $>25\%$, evaluate the date against active indicators:
+    - Check if news reports showed weather events (`natural_disaster_at_destination` $\rightarrow$ "Monsoon/Storm").
+    - Check if prices dropped below 15th percentile overnight $\rightarrow$ "Unpredicted Flash Sale".
+    - Check if travel dates coincided with CBSE boards $\rightarrow$ "Board Exam Shift".
+  - Log the classified cause to a new database table `error_attribution`.
+  - Automatically adjust the weights of these features (e.g., dampening news advisory weight if it produced false positives) by updating a dynamic multiplier table read by the XGBoost pipeline.
+
+---
+
+## Verification Plan
+
+### Automated Tests
+- Create `backend/tests/test_all_enhancements.py` to assert:
+  - Correct computation of the **IRCTC Railway Pressure Index**.
+  - Multiplication coefficients on **Bridge Days**.
+  - Dynamic scheduling shifts when high price velocity is simulated.
+  - Parallel proxy comparison returns correct location differentials.
+  - Optuna hyperparameter tuning runs and converges.
+  - Error classification accurately flags weather disruptions and sale anomalies.
+
+- Run the test suite:
+  ```bash
+  .\venv\Scripts\pytest.exe backend/tests/test_all_enhancements.py
+  ```

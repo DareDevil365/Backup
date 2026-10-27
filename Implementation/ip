@@ -1,0 +1,233 @@
+# Flight Finder — Complete Rebuild Plan
+
+Your vision is genuinely ambitious and the existing codebase has solid architectural bones. The backend pipeline (dispatcher → workers → coupon brute-forcer → deal scorer) is well-structured, and the ML prediction system is surprisingly sophisticated. However, the current app has critical integration gaps that prevent it from actually running end-to-end, and the frontend — while functional — doesn't match the premium experience your idea deserves.
+
+**I'm proposing a from-scratch frontend rebuild** with targeted backend fixes to make the entire system actually boot up, run searches, and deliver results. Here's what changes and why.
+
+---
+
+## User Review Required
+
+> [!IMPORTANT]
+> **Dropping the Electron Shell**: The current Electron wrapper adds complexity (spawn timing, window management, preload scripts) but provides zero features you can't get from a browser. I recommend running this as a **pure web app** — `npm run dev` for the frontend, `python main.py` for the backend. This eliminates the #1 failure mode (Electron not waiting for Python to boot). Do you agree, or do you want to keep Electron?
+
+> [!IMPORTANT]
+> **API Keys**: Your `.env` has Gemini API keys for the AI Worker. The AI Worker is the real-site scraping engine (MakeMyTrip, Cleartrip, etc.) that uses LLM to navigate pages dynamically. For the initial build, I'll make the **MockWorker** (simulated airline site) work flawlessly so you can demo the full pipeline without needing live API keys or risking anti-bot detection. The real-site workers will work once you have valid API keys and the mock pipeline is proven. Sound good?
+
+> [!WARNING]
+> **No actual flight booking will happen** — the app navigates to checkout and tests coupons, but the "Book Now" handoff feature (bringing hidden browser to foreground) requires headed Playwright browsers. I'll make this work with the mock worker pipeline. Real-site booking handoff is a Phase 2 feature that depends on residential proxies and stealth browser config.
+
+---
+
+## Open Questions
+
+1. **Color Theme Preference**: The current UI uses a slate/charcoal dark theme. I'm planning a more vibrant dark theme with electric indigo accents, glassmorphism panels, and animated gradients. Any color preferences?
+
+2. **Priority Features**: Your idea mentions two big pillars — (A) Web Scraping + Coupon Testing and (B) ML Price Prediction. Both are partially built. Should I prioritize making the **scraping pipeline work visually end-to-end** (with mock data) or the **prediction intelligence dashboard** first? I'll build both, but want to know your priority for the initial demo.
+
+3. **Real Airline Sites**: Which platforms do you want to target first when we move past mock? MakeMyTrip, EaseMyTrip, Cleartrip, or specific airline portals (IndiGo, Air India)?
+
+---
+
+## Proposed Changes
+
+### Phase 1: Frontend — Complete Rebuild from Scratch
+
+The current `App.tsx` is a 1,294-line monolith with all inline styles. I'm breaking this into clean components with a premium design system.
+
+---
+
+#### [NEW] Design System & Global Styles
+##### [MODIFY] [index.css](file:///c:/Users/yasha/Desktop/Flight%20Finder/frontend/src/index.css)
+
+Complete rewrite of the CSS design system:
+- **New color palette**: Deep space navy (`#080b16`) base, electric indigo (`#6366f1`) primary, emerald success, amber warning
+- **Glassmorphism**: `backdrop-filter: blur(12px)` cards with translucent borders
+- **Typography**: Inter for UI, JetBrains Mono for terminal/data
+- **Micro-animations**: Fade-in cards, shimmer loading states, pulse indicators, smooth hover transitions
+- **Responsive grid system**: Sidebar + content area with proper overflow handling
+- **Premium form inputs**: Custom styled with glow focus states
+- **Custom scrollbar**: Thin, dark, blends into background
+
+---
+
+#### [NEW] Component Architecture
+
+##### [NEW] [components/Sidebar.tsx](file:///c:/Users/yasha/Desktop/Flight%20Finder/frontend/src/components/Sidebar.tsx)
+Premium navigation sidebar with:
+- Animated logo with plane icon
+- Navigation links with active state indicators (animated left border)
+- Connection status indicator (pulsing green dot)
+- Collapsible on smaller screens
+
+##### [NEW] [components/SearchCockpit.tsx](file:///c:/Users/yasha/Desktop/Flight%20Finder/frontend/src/components/SearchCockpit.tsx)
+The main search interface — redesigned as a **multi-module cockpit**:
+- **AI Text Input**: Natural language bar ("Delhi to Goa next Friday evening, non-stop") with sparkle icon and animated processing state
+- **Flight Details Card**: Origin/destination with airport code autocomplete suggestions, date picker, passenger count, cabin class selector
+- **Platform Grid**: Visual card grid with platform logos, toggle checkboxes, and "selected" glow effect
+- **Financial Constraints Panel**: Bank card whitelist toggles, EMI/BNPL switches, natural language rules textarea
+- **Stealth Engine Config**: Proxy mode selector, browser engine picker, concurrency slider with labeled tick marks
+- **Launch Button**: Large gradient button with animated pulse when ready, transforms to cancel button during search
+
+##### [NEW] [components/LiveMonitor.tsx](file:///c:/Users/yasha/Desktop/Flight%20Finder/frontend/src/components/LiveMonitor.tsx)
+Real-time search execution dashboard:
+- **Bot Status Cards**: One card per platform worker showing phase name, animated progress bar, current status badge
+- **Live Browser Thumbnails**: Grid of screenshot previews from headless browsers (streamed via WebSocket)
+- **Terminal Console**: Dark terminal-themed log feed with color-coded severity levels (info=indigo, success=green, warning=amber, error=red), auto-scroll, timestamp column
+
+##### [NEW] [components/ResultsRanker.tsx](file:///c:/Users/yasha/Desktop/Flight%20Finder/frontend/src/components/ResultsRanker.tsx)
+Flight results display with:
+- **AI Recommendation Banner**: Dynamic buy/wait/monitor signal with confidence percentage, reasoning text, and urgency badge
+- **Flight Cards**: Each card shows airline, flight number, times, duration, stops, platform badge, base price (struck through), final price (highlighted green), deal score meter, applied coupon code
+- **Savings Waterfall Chart**: Recharts bar chart showing price reduction steps (listed → coupon → cashback → card rewards → effective)
+- **Competitor Comparison Table**: Side-by-side matrix of all platform results
+- **Booking Handoff Button**: Prominent CTA that activates foreground browser transfer
+- **Claim Instructions**: Step-by-step guide on how to replicate the discovered deal
+
+##### [NEW] [components/PriceHistory.tsx](file:///c:/Users/yasha/Desktop/Flight%20Finder/frontend/src/components/PriceHistory.tsx)
+Price analytics dashboard:
+- **Route Selector**: Input with common route suggestions
+- **Price Trend Chart**: Recharts line chart with gradient area fill, dot markers, custom tooltip
+- **Prediction Overlay**: Forecast line (7d, 14d, 30d) with confidence band shading
+- **Stats Cards**: 30-day lowest, average, volatility index, seasonality indicator, fuel price trend
+- **AI Buy Signal Panel**: Large signal display (BUY NOW / WAIT / MONITOR) with confidence meter, reasoning paragraph, date-shifting advice, geopolitical alert box
+- **Date Flexibility Grid**: Shows prices for ±3 days around selected date
+
+##### [NEW] [components/Watchlist.tsx](file:///c:/Users/yasha/Desktop/Flight%20Finder/frontend/src/components/Watchlist.tsx)
+Route monitoring:
+- **Add Route Form**: Inline form with origin, destination, date, target price, frequency selector
+- **Active Watches Table**: Route, date, target price, last checked price, status badge, delete button
+- **Alert History**: Recent price drop notifications with dismiss/action buttons
+
+##### [NEW] [components/Settings.tsx](file:///c:/Users/yasha/Desktop/Flight%20Finder/frontend/src/components/Settings.tsx)
+Configuration panel:
+- **Card Reward Rates**: Add/remove bank cards with reward percentages
+- **Proxy Configuration**: Provider selector, rotation type, connection test button
+- **API Key Management**: Input for Gemini/OpenAI keys (masked display)
+
+---
+
+#### [MODIFY] [App.tsx](file:///c:/Users/yasha/Desktop/Flight%20Finder/frontend/src/App.tsx)
+
+Complete rewrite — thin shell that renders Sidebar + active tab component. No more 1,300 lines of inline JSX. Clean component composition with proper routing.
+
+---
+
+#### [MODIFY] [store/index.ts](file:///c:/Users/yasha/Desktop/Flight%20Finder/frontend/src/store/index.ts)
+
+Refactor Zustand stores:
+- Fix TypeScript types for all state slices
+- Add proper action types for search, bot, result, and settings stores
+- Add `notifications` store for watchlist alerts
+- Add `dateFlexibility` state for nearby date price comparisons
+
+#### [MODIFY] [types/index.ts](file:///c:/Users/yasha/Desktop/Flight%20Finder/frontend/src/types/index.ts)
+
+Update TypeScript interfaces to match the actual backend response schemas (especially the prediction engine's rich output format).
+
+#### [MODIFY] [hooks/useWebSocket.ts](file:///c:/Users/yasha/Desktop/Flight%20Finder/frontend/src/hooks/useWebSocket.ts)
+
+Add handlers for new message types:
+- `watchlist:alert` — push notifications
+- `predict:result` — rich prediction data
+- `coupon:refresh:progress` — coupon harvesting progress
+- Better reconnection logic with exponential backoff
+
+---
+
+### Phase 2: Backend — Fix & Harden
+
+The backend architecture is good but has integration issues that prevent it from running. Here are the targeted fixes:
+
+---
+
+#### [MODIFY] [main.py](file:///c:/Users/yasha/Desktop/Flight%20Finder/backend/main.py)
+
+- Fix deprecated `@app.on_event("startup")` → use `lifespan` context manager
+- Add CORS middleware (currently missing — frontend can't connect cross-origin!)
+- Add proper error handling for missing `.env` file
+- Fix `random` import missing in `dispatcher.py` (referenced but never imported)
+
+#### [MODIFY] [dispatcher.py](file:///c:/Users/yasha/Desktop/Flight%20Finder/backend/dispatcher.py)
+
+- Add `import random` (line 291 uses `random.choice` but never imports it)
+- Fix screenshot encoding (currently `page.screenshot()` returns bytes, not base64 — need to encode properly)
+- Add graceful handling when browser factory fails to create context
+- Ensure search results are properly emitted even for single-platform searches
+
+#### [MODIFY] [stealth/browser_factory.py](file:///c:/Users/yasha/Desktop/Flight%20Finder/backend/stealth/browser_factory.py)
+
+- Add fallback when Playwright browsers aren't installed (`playwright install chromium`)
+- Fix headed mode for handoff sessions (currently all browsers launch headless, which prevents foreground handoff)
+- Add graceful error handling for Camoufox import failures
+
+#### [MODIFY] [workers/mock_worker.py](file:///c:/Users/yasha/Desktop/Flight%20Finder/backend/workers/mock_worker.py)
+
+- Fix the `is_at_checkout` method — `page.title()` returns empty string for `data:text/html` pages. Use page content check instead
+- Add more realistic mock delay timings
+- Add mock data variety (randomize flight prices slightly each run)
+
+#### [MODIFY] [coupon_db.py](file:///c:/Users/yasha/Desktop/Flight%20Finder/backend/coupon_db.py)
+
+- Add `IF NOT EXISTS` guards on schema creation for idempotent restarts
+- Verify schema.sql exists before reading it
+
+#### [MODIFY] [price_predictor.py](file:///c:/Users/yasha/Desktop/Flight%20Finder/backend/price_predictor.py)
+
+- Fix the response format mismatch — frontend expects `prediction` key but backend returns `decision.signal`
+- Add compatibility shim so both old format (`prediction: "BUY_NOW"`) and new rich format work
+- Fix the `predict` method to handle the frontend's `predict:get` message format (route + date)
+
+#### [NEW] [backend/db/schema.sql](file:///c:/Users/yasha/Desktop/Flight%20Finder/backend/db/schema.sql)
+
+Verify/create the schema file with all required tables: `coupons`, `searches`, `search_results`, `price_history`, `watchlist`, `external_savings`, `notifications`, `observed_prices`, `predictions`, `prediction_outcomes`.
+
+---
+
+### Phase 3: Integration & Polish
+
+#### [MODIFY] [frontend/vite.config.ts](file:///c:/Users/yasha/Desktop/Flight%20Finder/frontend/vite.config.ts)
+
+Add proxy configuration so frontend dev server forwards WebSocket connections to `localhost:8765` — eliminates CORS issues during development.
+
+#### Electron (Optional — Keep but simplify)
+
+Per the decision above, I'll keep the Electron shell working but not required. The app runs standalone as web.
+
+---
+
+## Verification Plan
+
+### Automated Tests
+
+```bash
+# 1. Frontend builds without TypeScript errors
+cd frontend && npm run build
+
+# 2. Backend starts without import errors
+cd backend && python -c "from main import app; print('Backend imports OK')"
+
+# 3. Backend health check
+cd backend && python -m uvicorn main:app --host 0.0.0.0 --port 8765 &
+curl http://localhost:8765/health
+```
+
+### Manual Verification
+
+1. **Start backend**: `cd backend && python main.py`
+2. **Start frontend**: `cd frontend && npm run dev`
+3. **Open browser** at `http://localhost:5173`
+4. **Verify WebSocket connection** — green dot in sidebar
+5. **Run a mock search** — select MockBooking.com platform, enter DEL→BOM, click search
+6. **Watch live monitor** — bot status cards should animate, terminal logs should stream
+7. **Check results** — verified flight results should appear with savings breakdown
+8. **Test price history** — navigate to History tab, enter DEL-BOM, see chart and prediction
+9. **Test watchlist** — add a route watch, verify it appears in table
+
+### Visual Quality Check
+- Dark theme is consistent across all tabs
+- Glassmorphism cards have visible blur and border effects
+- Animations are smooth (no jank on transitions)
+- Charts render with proper colors and tooltips
+- Forms have focus glow states
+- Terminal console auto-scrolls and is readable

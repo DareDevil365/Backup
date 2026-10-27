@@ -1,0 +1,19 @@
+[
+  {
+    "session_id": "win_test_expired",
+    "closed_at": 1789849449394.0874,
+    "tab_count": 2,
+    "title_preview": "Old Tabs",
+    "tabs": [
+      {
+        "title": "Old",
+        "url": "https://old.com",
+        "favIconUrl": "",
+        "groupId": null,
+        "groupTitle": null,
+        "groupColor": null
+      }
+    ],
+    "groups": []
+  }
+]

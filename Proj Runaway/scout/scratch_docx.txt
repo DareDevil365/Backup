@@ -1,0 +1,168 @@
+0: Case Crackdown
+1: Q1. D2C Food Brand – Margin Compression
+2: A fast-growing healthy snacks D2C brand sells protein bars online.
+ Recent metrics show:
+3: Revenue ↑ 40% YoY
+
+4: CAC ↑ 60%
+
+5: Repeat purchase rate unchanged
+
+6: Gross margin stable at 55%
+
+7: Despite growth, EBITDA is falling.
+8: Which action MOST directly fixes structural profitability?
+9: A) Increase ad spend further to sustain growth momentum
+ B) Launch subscription bundles with auto-replenishment discounts
+ C) Reduce product quality to cut COGS
+ D) Expand to marketplaces like Amazon immediately
+10: ✅ Answer: B
+ Logic: Improves LTV via repeat purchases, lowering CAC/LTV pressure structurally.
+12: Q2. Cloud SaaS – Enterprise Sales Strategy
+13: A B2B SaaS startup serves SMBs at $20/month ARPU. Growth is slowing. Enterprises are willing to pay $15k/year but require long integrations and 6-month sales cycles.
+14: Before hiring a large enterprise sales team, what should be done FIRST?
+15: A) Reduce SMB pricing to defend share
+ B) Build custom enterprise features immediately
+ C) Run 3–4 paid pilots with one narrow industry vertical
+ D) Acquire a small enterprise competitor
+16: ✅ Answer: C
+ Logic: Validate PMF and sales cycle economics before scaling expensive enterprise GTM.
+18: Q3. Quick Commerce – Dark Store Economics
+19: A 10-minute grocery delivery startup operates 200 dark stores. Data shows:
+20: Orders/store ↓
+
+21: Rent fixed
+
+22: Picker wages fixed
+
+23: Delivery cost/order ↑
+
+24: Which move has the highest immediate unit-economics impact?
+25: A) Increase product prices by 3%
+ B) Shut bottom-quartile stores and consolidate demand
+ C) Add more SKUs to attract customers
+ D) Increase marketing discounts
+26: ✅ Answer: B
+ Logic: Improves order density → spreads fixed costs → raises contribution margin fast.
+28: Q4. EV Manufacturer – Battery Risk
+29: An EV maker sources lithium from one country that is now imposing export quotas. Alternative suppliers cost 20% more.
+30: What is the most balanced response?
+31: A) Stockpile 5 years of lithium inventory
+ B) Shift entirely to the higher-cost supplier
+ C) Redesign vehicles to use smaller battery packs + diversify 30% sourcing
+ D) Raise prices immediately
+32: ✅ Answer: C
+ Logic: Engineering + partial diversification lowers dependence without full cost shock.
+34: Q5. Fintech – Fraud Losses Rising
+35: A payments app sees:
+36: User growth ↑
+
+37: Transaction volume ↑
+
+38: Fraud losses ↑ sharply
+
+39: CAC stable
+
+40: Which change protects margins without hurting growth?
+41: A) Increase fees for all users
+ B) Stop onboarding new users
+ C) Implement real-time risk-based transaction limits
+ D) Reduce marketing spend
+42: ✅ Answer: C
+ Logic: Targeted tightening removes bad actors while preserving growth.
+44: Q6. Airline – Load Factor Problem
+45: An airline sees:
+46: Seat capacity ↑ 25%
+
+47: Load factor ↓ from 85% → 62%
+
+48: Ticket prices unchanged
+
+49: Fuel prices stable
+
+50: What explains declining profits MOST?
+51: A) Brand perception decline
+ B) Overcapacity leading to poor asset utilization
+ C) Higher airport taxes
+ D) Crew dissatisfaction
+52: ✅ Answer: B
+ Logic: Low load factor spreads fixed costs across fewer passengers → unit cost spike.
+54: Q7. Marketplace – Chicken & Egg Problem
+55: A services marketplace (tutors) struggles because:
+56: Customers complain of low availability
+
+57: Tutors complain of low bookings
+
+58: Which step best breaks the deadlock?
+59: A) Increase ads on both sides equally
+ B) Subsidize one side (guaranteed minimum earnings) temporarily
+ C) Reduce platform commission
+ D) Expand to new cities
+60: ✅ Answer: B
+ Logic: Liquidity first. Seeding one side solves network cold-start.
+62: Q8. Pharma – Manufacturing Cost Spike
+63: A drug maker faces a 35% rise in API import costs. Generics limit price hikes.
+64: Best operational hedge?
+65: A) Exit the drug category
+ B) Outsource entire production
+ C) Backward integrate into domestic API manufacturing
+ D) Increase marketing spend
+66: ✅ Answer: C
+ Logic: Vertical integration secures supply + controls cost volatility long-term.
+68: Q9. EdTech – High Churn
+69: An online test-prep app shows:
+70: 30% monthly churn
+
+71: Course completion rate low
+
+72: CAC stable
+
+73: Which quick intervention reduces churn MOST?
+74: A) Offer heavy discounts
+ B) Add gamified milestones + streak rewards
+ C) Expand to more exams
+ D) Increase ads
+75: ✅ Answer: B
+ Logic: Engagement drives retention; price cuts don’t fix product stickiness.
+77: Q10. Luxury Brand – Mass Expansion Risk
+78: A ₹50k premium sneaker brand wants to target college students.
+79: How should it scale without diluting exclusivity?
+80: A) Launch ₹5k version under same label
+ B) Discount existing products
+ C) Create a sub-brand with distinct design + distribution
+ D) Sell through discount marketplaces
+81: ✅ Answer: C
+ Logic: Sub-branding protects core equity while reaching new segment.
+83: Q11. Logistics – Warehouse Bottleneck
+84: A fulfillment center shows:
+85: Order inflow stable
+
+86: Dispatch delays ↑
+
+87: Pick time per order ↑
+
+88: Labor unchanged
+
+89: What is the highest ROI fix?
+90: A) Hire more workers
+ B) Increase delivery fees
+ C) Implement zone-based picking + optimized layout
+ D) Reduce SKU count randomly
+91: ✅ Answer: C
+ Logic: Process efficiency beats brute-force labor scaling.
+93: Q12. Subscription OTT – Pricing
+94: An OTT platform has:
+95: High engagement
+
+96: Strong retention
+
+97: ARPU low
+
+98: Goal: increase monetization without churn.
+99: Best strategy?
+100: A) Increase price for everyone
+ B) Add ads to all plans
+ C) Introduce tiered pricing (Basic/Ad-free/Premium)
+ D) Cut content costs
+101: ✅ Answer: C
+ Logic: Price discrimination captures willingness to pay while protecting base users.

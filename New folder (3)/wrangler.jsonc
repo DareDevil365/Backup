@@ -1,0 +1,32 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "urx-core75-stock-checker",
+  "main": "src/index.js",
+  "compatibility_date": "2024-10-01",
+
+  // Cron trigger: runs every hour at minute 0
+  "triggers": {
+    "crons": [
+      "0 * * * *"
+    ]
+  },
+
+  // Default environment variables (can be overridden via wrangler secret or Cloudflare dashboard)
+  "vars": {
+    "TARGET_VARIANT_ID": "50096264904943",
+    "TARGET_COLOR_NAME": "Frost White",
+    "PRODUCT_HANDLE": "core75-mechanical-keyboard",
+    "PRODUCT_API_URL": "https://urx.co.in/products/core75-mechanical-keyboard.js",
+    "PRODUCT_PAGE_URL": "https://urx.co.in/products/core75-mechanical-keyboard?variant=50096264904943"
+  }
+
+  // Optional: To avoid repeated Discord alerts while the item stays in stock,
+  // create a KV namespace with: `npx wrangler kv namespace create STOCK_KV`
+  // and uncomment the kv_namespaces section below:
+  // "kv_namespaces": [
+  //   {
+  //     "binding": "STOCK_KV",
+  //     "id": "<YOUR_KV_NAMESPACE_ID>"
+  //   }
+  // ]
+}

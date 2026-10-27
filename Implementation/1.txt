@@ -1,0 +1,174 @@
+# skill.md â€” Orchestration Core (AI Scraper-cum-Researcher)
+
+> **What this file is.** The master orchestration contract for a 3-stage
+> research tool: **Stage 1 parsing** â†’ **Stage 2 source discovery** (see
+> `Selection_discovery.md`) â†’ **Stage 3 scrape â†’ analyze â†’ deliver** (see
+> `Parsing_and_delivery.md` for Stage-1 flow detail and the delivery-folder
+> contract). This file owns: model-tier routing, the budget ratios, timeouts,
+> incremental persistence, and the effort-driven completion model.
+
+---
+
+## 0. Prime Directive â€” "Nothing behind cover"
+
+**The single most important rule. Everything else serves it.**
+
+The deliverable folder is built **incrementally, as a side effect of work** â€”
+never assembled in memory and written as a final step. If the program dies at
+*any* instant, the folder already contains everything completed up to that
+instant.
+
+- Every scraped page â†’ appended to `raw_research.jsonl` **immediately**, with
+  `flush()` per write. No batching in memory.
+- Synthesized report â†’ written to `final_output.md` **section by section** as
+  each section completes, not at the end.
+- Sources ledger â†’ `sources.json` updated on every accept/reject decision.
+- One delivery folder holds everything (see Â§8 / `Parsing_and_delivery.md` Â§4).
+
+> This directly kills the worst observed bug: *"it scrapes, takes all the time,
+> but nothing is reported in the returned file."* There is **no all-or-nothing
+> final write** anywhere in the system.
+
+---
+
+## 1. The three stages at a glance
+
+| Stage | Owns | Strong-model (T1) work | Cheap-model / code work |
+|-------|------|------------------------|--------------------------|
+| **1 â€” Parse** | Understand the ask | Assumptions, cross-questioning, search-prompt generation, effort estimate | Fast entity/scope extraction, obvious-question detection |
+| **2 â€” Discover** | Find + rank sources | Query fan-out, intent weighting, ambiguous-source judgment | Result harvesting, cheap authority signals (`Selection_discovery.md`) |
+| **3 â€” Scrapeâ†’Deliver** | Get pages, build output | Summarization, analysis, synthesis, graph/template decisions | Static fetch, boilerplate stripping, mechanical extraction |
+
+---
+
+## 2. Task â†’ model-tier routing (the default discipline)
+
+Routing is **by task complexity, not convenience**. A hard ceiling means
+mechanical work *can never* burn premium quota.
+
+| Task | Tier | Why |
+|------|------|-----|
+| Assumption generation, cross-questioning | **T1 (strong)** | Judgment-heavy |
+| Search-prompt + query fan-out | **T1** | Judgment-heavy |
+| Effort estimate | **T1** | Needs reasoning over the brief |
+| Ambiguous-source scoring (middle band) | **T2 (mid)**, batched | Borderline calls only |
+| Page summarization | **T2/T3 (cheap)** | Volume work |
+| Boilerplate stripping / text extraction | **code, no LLM** | Readability extraction is deterministic |
+| Result harvesting | **code, no LLM** | Mechanical |
+
+> The multi-API rotation code is **yours and already reliable** â€” this skill
+> does not manage keys. It only declares *which tier* each task needs; the
+> rotation layer decides which key/model serves that tier, and may split one
+> task across multiple keys if that's more efficient.
+
+---
+
+## 3. Budget ratios + the effort-driven completion model
+
+**There is no wall-clock budget.** Duration is a *consequence* of the work, not
+an input. (Earlier `T_total` / pacing-to-a-clock machinery is fully removed.)
+
+### 3.1 Quota budget (ratios, not times)
+- Reserve **~40% of premium (T1) capacity for final synthesis.** Synthesis is
+  the irreplaceable step; never arrive at it quota-starved.
+- Discovery + scraping draw from the remaining ~60%, but scraping is
+  tier-capped (Â§2) so it mostly spends cheap quota anyway.
+
+### 3.2 Effort estimate (Stage 1, T1)
+The strong model emits an estimate in **units of work**, not minutes:
+`â‰ˆ N sources to discover, M pages to scrape, K synthesis passes`. Robust to
+how fast/slow the local machine is.
+
+### 3.3 Buffer â€” **adaptive, with fixed fallback**
+- **First run / no history:** use a fixed **+40%** buffer over the estimate
+  (local execution is slower than the estimate assumes).
+- **Thereafter:** read `run_log.jsonl` (estimate-vs-actual of past runs) and set
+  the buffer to the trailing ratio, clamped to `[+20%, +80%]`. Each finished run
+  appends its `{estimated_work, actual_work}` so the buffer self-corrects.
+
+### 3.4 Soft effort ceiling (the "but not 10 hrs" guardrail)
+When `actual_work > estimated_work Ã— (1 + buffer)`, the system does **not** charge
+on blindly. It:
+1. checkpoints, 2. writes the partial result, 3. emits a *"still going, here's
+why"* note (e.g. *"found 3Ã— more relevant sources than estimated"*), then
+continues only if the reason is legitimate. A long run is always a *justified*
+long run, never a runaway.
+
+### 3.5 Diminishing-returns cutoff (what honestly ends a run)
+Independent of any ceiling: stop discovering/scraping once new pages stop adding
+new information (corroboration saturates). This is the *real* reason most runs
+should end. See `Selection_discovery.md` for the saturation signal.
+
+---
+
+## 4. Fixed times â€” the ONLY clocks in the system
+
+### 4.1 Per-call / per-job timeouts
+Tied to **tier + task type**, never to total run length:
+
+| Task type | Timeout | On expiry |
+|-----------|---------|-----------|
+| Static page fetch | 20s | mark thin, escalate to rendered fetch |
+| Rendered/headless fetch | 45s | abandon page, log fail, move on |
+| Cheap summarization call | 60s | retry once, then reroute tier |
+| T1 reasoning call | 90s | retry once on another key, then degrade |
+
+A hung call is the real enemy. **Kill it, register the failure, reroute** â€” the
+run never stalls waiting on one stuck request.
+
+### 4.2 Failure registration
+Every failure is recorded (`failures.jsonl`: url/task, tier, error, action taken)
+so partial fails never silently hinder the program, and a retry pass can target
+exactly what failed.
+
+---
+
+## 5. Stage 3 scraping efficiency (the upgrade)
+
+- **Tiered fetch:** cheap static HTTP first; escalate to headless/rendered
+  **only** when content is thin or JS-gated. Don't pay rendering cost per page.
+- **Extract-then-summarize split:** deterministic readability extraction in code
+  (no LLM); only *summarization* spends a model call.
+- **Concurrent fan-out** across sources within quota, **each result persisted on
+  arrival** (Â§0).
+- **Selective, not exhaustive:** scrape only pages matching the depth/scope from
+  Stage 1, walking the ranked queue **best-first** â€” so if cut short, the
+  highest-authority sources were already done.
+
+---
+
+## 6. Analysis & output
+
+- AI analyzes scraped info and formats **per user preference**, using **templates**
+  where appropriate.
+- Analytical requests: produce graphs/images either **extracted from scraped
+  sources** or **generated** from the data.
+- Final deliverable: readable, well-structured, with **inline links** and a
+  **Sources section** carrying each source's tier + rationale.
+
+---
+
+## 7. Resumability
+
+If a long-but-worthwhile run exhausts daily quota, the system **stops cleanly,
+persists a cursor, and resumes at the next reset with zero re-scraping.** This
+triggers *naturally* from quota exhaustion now â€” not from any duration parameter.
+
+---
+
+## 8. Delivery folder contract (summary)
+
+One folder per run containing at minimum:
+`raw_research.jsonl` Â· `final_output.md` Â· `sources.json` Â· `failures.jsonl` Â·
+`/assets` (generated/extracted graphs & images) Â· `run_log.jsonl` (estimate-vs-actual).
+Full schema in `Parsing_and_delivery.md` Â§4.
+
+---
+
+## 9. Per-change checklist
+
+- [ ] No new all-or-nothing write introduced (Prime Directive intact).
+- [ ] Every new task assigned a tier in Â§2.
+- [ ] No wall-clock pacing reintroduced; only Â§4 timeouts are fixed times.
+- [ ] Synthesis quota reserve (Â§3.1) preserved.
+- [ ] New failure modes registered to `failures.jsonl`.

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RunawayScout — AI Data Intelligence</title>
+    <meta name="description" content="AI-powered web scraping and data intelligence tool">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+                    </svg>
+                </div>
+                <div>
+                    <h1>RunawayScout</h1>
+                    <p class="logo-sub">AI-Powered Data Intelligence</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <button class="btn-history" id="btnToggleHistory" onclick="toggleHistory()" title="Research History">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                        <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    <span>History</span>
+                </button>
+                <button class="btn-config" onclick="showConfigModal()" title="Settings">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                        <circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    </svg>
+                </button>
+                <div class="header-status" id="statusBadge">
+                    <span class="status-dot"></span> Ready
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Config Modal -->
+    <div id="configModal" class="modal hidden">
+        <div class="modal-inner">
+            <div class="modal-header">
+                <h3>⚙️ API Configuration</h3>
+                <button class="popup-close" onclick="hideConfigModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Perplexity API Key (for source discovery)</label>
+                    <input type="password" id="perplexityKey" placeholder="pplx-..." class="input" />
+                    <p class="input-hint">Get a free key at <a href="https://www.perplexity.ai/settings/api" target="_blank">perplexity.ai/settings/api</a></p>
+                </div>
+                <button class="btn-primary" onclick="saveConfig()">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- History Sidebar -->
+    <aside id="historySidebar" class="history-sidebar hidden">
+        <div class="history-header">
+            <h3>📚 Research History</h3>
+            <button class="popup-close" onclick="toggleHistory()">&times;</button>
+        </div>
+        <div id="historyList" class="history-list">
+            <div class="history-empty">No past research found.</div>
+        </div>
+    </aside>
+
+    <!-- Mode Tabs -->
+    <nav class="tabs">
+        <button class="tab active" data-mode="scrape" onclick="switchMode('scrape')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="tab-icon"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            Direct Scrape
+        </button>
+        <button class="tab" data-mode="discover" onclick="switchMode('discover')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="tab-icon"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            Auto-Discover
+        </button>
+        <button class="tab" data-mode="compile" onclick="switchMode('compile')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="tab-icon"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg>
+            Multi-Compile
+        </button>
+    </nav>
+
+    <main class="main">
+        <!-- SCRAPE MODE -->
+        <section id="mode-scrape" class="mode-panel active">
+            <div class="input-card">
+                <h2 class="card-title">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="title-icon"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                    Direct URL Scrape
+                </h2>
+                <p class="card-desc">Provide a URL and tell me what data you need. I'll fetch the page and use AI to extract exactly what you want.</p>
+                
+                <div class="form-group">
+                    <label>Target URL</label>
+                    <input type="text" id="scrapeUrl" placeholder="https://example.com/pricing" class="input" />
+                </div>
+                <div class="form-group">
+                    <label>What to Extract</label>
+                    <textarea id="scrapeInstruction" rows="3" placeholder="Extract all pricing tiers, fees, and discount information..." class="input textarea"></textarea>
+                </div>
+                <button class="btn-primary" id="btnScrape" onclick="runScrape()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    Scrape & Extract
+                </button>
+            </div>
+        </section>
+
+        <!-- DISCOVER MODE -->
+        <section id="mode-discover" class="mode-panel">
+            <div class="input-card">
+                <h2 class="card-title">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="title-icon"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                    Auto-Discover Sources
+                </h2>
+                <p class="card-desc">Describe what data you need. I'll search the web, find the best sources, and optionally scrape them for you.</p>
+                
+                <div class="form-group">
+                    <label>What are you looking for?</label>
+                    <textarea id="discoverQuery" rows="3" placeholder="Find pricing data for Indian logistics companies including base rates, COD fees, and volume discounts..." class="input textarea"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Extraction Focus (optional)</label>
+                    <textarea id="discoverInstruction" rows="2" placeholder="Extract pricing, fees, and commission data..." class="input textarea"></textarea>
+                </div>
+                <button class="btn-primary" id="btnDiscover" onclick="runDiscover()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                    Discover Sources
+                </button>
+            </div>
+        </section>
+
+        <!-- COMPILE MODE -->
+        <section id="mode-compile" class="mode-panel">
+            <div class="input-card">
+                <h2 class="card-title">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="title-icon"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg>
+                    Multi-Source Compiler
+                </h2>
+                <p class="card-desc">Give me a list of companies and what data you need. I'll scrape real sources, use Perplexity to find more, and compile everything into one table with actual prices.</p>
+                
+                <div class="form-group">
+                    <label>Companies (one per line)</label>
+                    <textarea id="compileCompanies" rows="5" placeholder="Delhivery&#10;Blue Dart&#10;Xpressbees&#10;Shiprocket&#10;Ecom Express" class="input textarea"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Data Points to Extract (one per line)</label>
+                    <textarea id="compileDataPoints" rows="4" placeholder="base shipping rates per kg&#10;COD fees (exact % or flat amount)&#10;fuel surcharge percentage&#10;weight slabs and rates" class="input textarea"></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group form-half">
+                        <label>Origin City (optional)</label>
+                        <input type="text" id="compileOrigin" placeholder="e.g. Jaipur" class="input" />
+                    </div>
+                    <div class="form-group form-half">
+                        <label>Destination City (optional)</label>
+                        <input type="text" id="compileDest" placeholder="e.g. Delhi" class="input" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Additional Instructions</label>
+                    <textarea id="compileInstruction" rows="2" placeholder="Focus on domestic shipping within India, per-kg pricing..." class="input textarea"></textarea>
+                </div>
+                <button class="btn-primary" id="btnCompile" onclick="runCompile()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg>
+                    Deep Compile
+                </button>
+            </div>
+        </section>
+
+        <!-- PROGRESS BAR -->
+        <div id="progressSection" class="progress-section hidden">
+            <div class="progress-card">
+                <div class="progress-header">
+                    <div class="spinner"></div>
+                    <span id="progressText">Processing...</span>
+                </div>
+                <div class="progress-bar-track">
+                    <div class="progress-bar-fill" id="progressBar"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RESULTS -->
+        <div id="resultsSection" class="results-section hidden">
+            <div class="results-header">
+                <h2 class="results-title">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="title-icon"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                    Results
+                </h2>
+                <div class="results-actions">
+                    <button class="btn-secondary" id="btnExport" onclick="exportCSV()">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Export CSV
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Summary Card -->
+            <div id="summaryCard" class="summary-card hidden">
+                <h3>Summary</h3>
+                <p id="summaryText"></p>
+            </div>
+
+            <!-- Route Info -->
+            <div id="routeCard" class="route-card hidden">
+                <span class="route-icon">🛣️</span>
+                <span id="routeText"></span>
+            </div>
+
+            <!-- Company Tracker (streaming mode) -->
+            <div id="companyTracker" class="company-tracker hidden"></div>
+
+            <!-- Sources Found -->
+            <div id="sourcesCard" class="sources-card hidden">
+                <h3>Discovered Sources</h3>
+                <div id="sourcesList" class="sources-list"></div>
+            </div>
+
+            <!-- Data Table -->
+            <div id="dataTableCard" class="data-table-card hidden">
+                <div class="table-scroll">
+                    <table id="dataTable" class="data-table">
+                        <thead id="dataTableHead"></thead>
+                        <tbody id="dataTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Raw JSON (collapsible) -->
+            <details class="raw-json-section">
+                <summary>Raw AI Response</summary>
+                <pre id="rawJson" class="raw-json"></pre>
+            </details>
+        </div>
+    </main>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

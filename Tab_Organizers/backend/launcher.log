@@ -1,0 +1,1297 @@
+INFO:     Started server process [20336]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:52343 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52343 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57039 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53936 - "DELETE /api/pages/51 HTTP/1.1" 204 No Content
+INFO:     127.0.0.1:53936 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53936 - "DELETE /api/pages/52 HTTP/1.1" 204 No Content
+INFO:     127.0.0.1:53936 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53198 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53198 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49694 - "DELETE /api/pages/50 HTTP/1.1" 204 No Content
+INFO:     127.0.0.1:49694 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55224 - "DELETE /api/pages/46 HTTP/1.1" 204 No Content
+INFO:     127.0.0.1:55224 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55224 - "DELETE /api/pages/45 HTTP/1.1" 204 No Content
+INFO:     127.0.0.1:55224 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55224 - "DELETE /api/pages/47 HTTP/1.1" 204 No Content
+INFO:     127.0.0.1:55224 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65348 - "DELETE /api/pages/53 HTTP/1.1" 204 No Content
+INFO:     127.0.0.1:65348 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56165 - "DELETE /api/pages/28 HTTP/1.1" 204 No Content
+INFO:     127.0.0.1:56165 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51878 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51878 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51878 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+^CINFO:     Started server process [31592]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:52184 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52184 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52184 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+^CINFO:     Started server process [24088]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:56497 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56497 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+^CINFO:     Started server process [25232]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:58438 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58438 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+^CINFO:     Started server process [33496]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+^CINFO:     Started server process [23832]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+^CINFO:     Started server process [7296]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:52426 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52426 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49866 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49866 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+^CINFO:     Started server process [30552]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:63652 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63652 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63652 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58336 - "DELETE /api/pages/39 HTTP/1.1" 204 No Content
+INFO:     127.0.0.1:58336 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58336 - "DELETE /api/pages/38 HTTP/1.1" 204 No Content
+INFO:     127.0.0.1:58336 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58336 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58336 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58393 - "DELETE /api/pages/36 HTTP/1.1" 204 No Content
+INFO:     127.0.0.1:58393 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58393 - "DELETE /api/pages/37 HTTP/1.1" 204 No Content
+INFO:     127.0.0.1:58393 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57173 - "GET /api/activity/summary?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57173 - "GET /api/activity/summary?days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57173 - "GET /api/activity/summary?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57173 - "GET /api/activity/summary?days=14 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57173 - "GET /api/activity/summary?days=30 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57173 - "GET /api/activity/summary?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57173 - "GET /api/activity/summary?days=14 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57173 - "GET /api/activity/summary?days=30 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57173 - "GET /api/activity/summary?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57173 - "GET /api/activity/summary?days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57173 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57173 - "DELETE /api/pages/23 HTTP/1.1" 204 No Content
+INFO:     127.0.0.1:57173 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57173 - "DELETE /api/pages/27 HTTP/1.1" 204 No Content
+INFO:     127.0.0.1:57173 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57173 - "DELETE /api/pages/17 HTTP/1.1" 204 No Content
+INFO:     127.0.0.1:57173 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59714 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+^CINFO:     Started server process [4344]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:58636 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55238 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55238 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55238 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     Started server process [12816]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:51537 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51537 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51537 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     Started server process [28248]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:53209 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53209 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53209 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     Started server process [14292]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:52292 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52292 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52292 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52292 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51311 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51311 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51217 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51217 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56595 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56595 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56595 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56595 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64029 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64029 - "GET /api/classify/rules HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64029 - "GET /api/classify/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64029 - "GET /api/windows/closed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64029 - "GET /api/windows/browser-sessions HTTP/1.1" 200 OK
+OpenRouter error 400 on oxalpha: {"error":{"message":"oxalpha is not a valid model ID","code":400},"user_id":"user_3I3kPq2h63b6x8Zlpb9mMwSaz0Y"}
+OpenRouter error 400 on oxalpha: {"error":{"message":"oxalpha is not a valid model ID","code":400},"user_id":"user_3I3kPq2h63b6x8Zlpb9mMwSaz0Y"}
+INFO:     127.0.0.1:60147 - "DELETE /api/windows/browser-sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64029 - "POST /api/classify/reclassify-all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64029 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64029 - "GET /api/classify/rules HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64029 - "GET /api/classify/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64029 - "GET /api/windows/closed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64029 - "GET /api/windows/browser-sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64029 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+forrtl: error (200): program aborting due to window-CLOSE event
+Image              PC                Routine            Line        Source             
+KERNELBASE.dll     00007FF9F5A23BDD  Unknown               Unknown  Unknown
+KERNEL32.DLL       00007FF9F6F5CCB7  Unknown               Unknown  Unknown
+ntdll.dll          00007FF9F876AD6C  Unknown               Unknown  Unknown
+INFO:     Started server process [18176]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:63160 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63160 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63160 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63160 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59436 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59436 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     Started server process [30892]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:63327 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63327 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63327 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63327 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50575 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+^CINFO:     Started server process [17568]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     Started server process [17724]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:51352 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51352 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52269 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52269 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52269 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     Started server process [31472]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:58679 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58679 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49869 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49869 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57707 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57707 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57707 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57707 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59232 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59232 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50518 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50518 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52458 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56117 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56117 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56117 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     Started server process [724]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     Started server process [22640]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:51345 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51345 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+^CINFO:     Started server process [36052]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:60267 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60267 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58707 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54381 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54381 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54381 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54381 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54381 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54381 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54381 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54381 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54381 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54381 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54381 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54381 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54381 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54381 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54381 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54381 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54381 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54381 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54381 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54381 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54381 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     Started server process [10044]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:51064 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51064 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51064 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51064 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51064 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51064 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51064 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65361 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65361 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65361 - "GET /api/classify/rules HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65361 - "GET /api/classify/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65361 - "GET /api/windows/closed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65361 - "GET /api/windows/browser-sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57951 - "PUT /api/classify/rules HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57951 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57951 - "GET /api/classify/rules HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57951 - "GET /api/classify/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57951 - "GET /api/windows/closed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57951 - "GET /api/windows/browser-sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57951 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57644 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57644 - "GET /api/graph?limit=100 HTTP/1.1" 200 OK
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights:   1%|          | 1/103 [00:00<00:00, 10255.02it/s, Materializing param=embeddings.LayerNorm.bias]Loading weights:   1%|          | 1/103 [00:00<00:00, 463.92it/s, Materializing param=embeddings.LayerNorm.bias]  Loading weights:   2%|1         | 2/103 [00:00<00:00, 796.94it/s, Materializing param=embeddings.LayerNorm.weight]Loading weights:   2%|1         | 2/103 [00:00<00:00, 760.94it/s, Materializing param=embeddings.LayerNorm.weight]Loading weights:   3%|2         | 3/103 [00:00<00:00, 1059.52it/s, Materializing param=embeddings.position_embeddings.weight]Loading weights:   3%|2         | 3/103 [00:00<00:00, 995.25it/s, Materializing param=embeddings.position_embeddings.weight] Loading weights:   4%|3         | 4/103 [00:00<00:00, 1248.21it/s, Materializing param=embeddings.token_type_embeddings.weight]Loading weights:   4%|3         | 4/103 [00:00<00:00, 1216.53it/s, Materializing param=embeddings.token_type_embeddings.weight]Loading weights:   5%|4         | 5/103 [00:00<00:00, 1416.99it/s, Materializing param=embeddings.word_embeddings.weight]      Loading weights:   5%|4         | 5/103 [00:00<00:00, 1381.71it/s, Materializing param=embeddings.word_embeddings.weight]Loading weights:   6%|5         | 6/103 [00:00<00:00, 1099.42it/s, Materializing param=encoder.layer.0.attention.output.LayerNorm.bias]Loading weights:   6%|5         | 6/103 [00:00<00:00, 1074.18it/s, Materializing param=encoder.layer.0.attention.output.LayerNorm.bias]Loading weights:   7%|6         | 7/103 [00:00<00:00, 1209.33it/s, Materializing param=encoder.layer.0.attention.output.LayerNorm.weight]Loading weights:   7%|6         | 7/103 [00:00<00:00, 948.02it/s, Materializing param=encoder.layer.0.attention.output.LayerNorm.weight] Loading weights:   8%|7         | 8/103 [00:00<00:00, 931.76it/s, Materializing param=encoder.layer.0.attention.output.dense.bias]      Loading weights:   8%|7         | 8/103 [00:00<00:00, 917.54it/s, Materializing param=encoder.layer.0.attention.output.dense.bias]Loading weights:   9%|8         | 9/103 [00:00<00:00, 869.69it/s, Materializing param=encoder.layer.0.attention.output.dense.weight]Loading weights:   9%|8         | 9/103 [00:00<00:00, 855.48it/s, Materializing param=encoder.layer.0.attention.output.dense.weight]Loading weights:  10%|9         | 10/103 [00:00<00:00, 638.81it/s, Materializing param=encoder.layer.0.attention.self.key.bias]     Loading weights:  10%|9         | 10/103 [00:00<00:00, 633.88it/s, Materializing param=encoder.layer.0.attention.self.key.bias]Loading weights:  11%|#         | 11/103 [00:00<00:00, 685.29it/s, Materializing param=encoder.layer.0.attention.self.key.weight]Loading weights:  11%|#         | 11/103 [00:00<00:00, 681.10it/s, Materializing param=encoder.layer.0.attention.self.key.weight]Loading weights:  12%|#1        | 12/103 [00:00<00:00, 658.22it/s, Materializing param=encoder.layer.0.attention.self.query.bias]Loading weights:  12%|#1        | 12/103 [00:00<00:00, 643.84it/s, Materializing param=encoder.layer.0.attention.self.query.bias]Loading weights:  13%|#2        | 13/103 [00:00<00:00, 685.69it/s, Materializing param=encoder.layer.0.attention.self.query.weight]Loading weights:  13%|#2        | 13/103 [00:00<00:00, 682.79it/s, Materializing param=encoder.layer.0.attention.self.query.weight]Loading weights:  14%|#3        | 14/103 [00:00<00:00, 729.34it/s, Materializing param=encoder.layer.0.attention.self.value.bias]  Loading weights:  14%|#3        | 14/103 [00:00<00:00, 726.65it/s, Materializing param=encoder.layer.0.attention.self.value.bias]Loading weights:  15%|#4        | 15/103 [00:00<00:00, 772.89it/s, Materializing param=encoder.layer.0.attention.self.value.weight]Loading weights:  15%|#4        | 15/103 [00:00<00:00, 769.94it/s, Materializing param=encoder.layer.0.attention.self.value.weight]Loading weights:  16%|#5        | 16/103 [00:00<00:00, 786.01it/s, Materializing param=encoder.layer.0.intermediate.dense.bias]    Loading weights:  16%|#5        | 16/103 [00:00<00:00, 780.99it/s, Materializing param=encoder.layer.0.intermediate.dense.bias]Loading weights:  17%|#6        | 17/103 [00:00<00:00, 823.08it/s, Materializing param=encoder.layer.0.intermediate.dense.weight]Loading weights:  17%|#6        | 17/103 [00:00<00:00, 816.93it/s, Materializing param=encoder.layer.0.intermediate.dense.weight]Loading weights:  17%|#7        | 18/103 [00:00<00:00, 857.27it/s, Materializing param=encoder.layer.0.output.LayerNorm.bias]    Loading weights:  17%|#7        | 18/103 [00:00<00:00, 854.21it/s, Materializing param=encoder.layer.0.output.LayerNorm.bias]Loading weights:  18%|#8        | 19/103 [00:00<00:00, 893.65it/s, Materializing param=encoder.layer.0.output.LayerNorm.weight]Loading weights:  18%|#8        | 19/103 [00:00<00:00, 890.73it/s, Materializing param=encoder.layer.0.output.LayerNorm.weight]Loading weights:  19%|#9        | 20/103 [00:00<00:00, 932.94it/s, Materializing param=encoder.layer.0.output.dense.bias]      Loading weights:  19%|#9        | 20/103 [00:00<00:00, 930.37it/s, Materializing param=encoder.layer.0.output.dense.bias]Loading weights:  20%|##        | 21/103 [00:00<00:00, 972.02it/s, Materializing param=encoder.layer.0.output.dense.weight]Loading weights:  20%|##        | 21/103 [00:00<00:00, 969.34it/s, Materializing param=encoder.layer.0.output.dense.weight]Loading weights:  21%|##1       | 22/103 [00:00<00:00, 1011.05it/s, Materializing param=encoder.layer.1.attention.output.LayerNorm.bias]Loading weights:  21%|##1       | 22/103 [00:00<00:00, 1008.39it/s, Materializing param=encoder.layer.1.attention.output.LayerNorm.bias]Loading weights:  22%|##2       | 23/103 [00:00<00:00, 1049.36it/s, Materializing param=encoder.layer.1.attention.output.LayerNorm.weight]Loading weights:  22%|##2       | 23/103 [00:00<00:00, 1046.69it/s, Materializing param=encoder.layer.1.attention.output.LayerNorm.weight]Loading weights:  23%|##3       | 24/103 [00:00<00:00, 1087.50it/s, Materializing param=encoder.layer.1.attention.output.dense.bias]      Loading weights:  23%|##3       | 24/103 [00:00<00:00, 1084.76it/s, Materializing param=encoder.layer.1.attention.output.dense.bias]Loading weights:  24%|##4       | 25/103 [00:00<00:00, 1125.03it/s, Materializing param=encoder.layer.1.attention.output.dense.weight]Loading weights:  24%|##4       | 25/103 [00:00<00:00, 1122.17it/s, Materializing param=encoder.layer.1.attention.output.dense.weight]Loading weights:  25%|##5       | 26/103 [00:00<00:00, 1162.07it/s, Materializing param=encoder.layer.1.attention.self.key.bias]      Loading weights:  25%|##5       | 26/103 [00:00<00:00, 1158.81it/s, Materializing param=encoder.layer.1.attention.self.key.bias]Loading weights:  26%|##6       | 27/103 [00:00<00:00, 1197.73it/s, Materializing param=encoder.layer.1.attention.self.key.weight]Loading weights:  26%|##6       | 27/103 [00:00<00:00, 1194.84it/s, Materializing param=encoder.layer.1.attention.self.key.weight]Loading weights:  27%|##7       | 28/103 [00:00<00:00, 1233.96it/s, Materializing param=encoder.layer.1.attention.self.query.bias]Loading weights:  27%|##7       | 28/103 [00:00<00:00, 1231.11it/s, Materializing param=encoder.layer.1.attention.self.query.bias]Loading weights:  28%|##8       | 29/103 [00:00<00:00, 1269.87it/s, Materializing param=encoder.layer.1.attention.self.query.weight]Loading weights:  28%|##8       | 29/103 [00:00<00:00, 1266.75it/s, Materializing param=encoder.layer.1.attention.self.query.weight]Loading weights:  29%|##9       | 30/103 [00:00<00:00, 1302.12it/s, Materializing param=encoder.layer.1.attention.self.value.bias]  Loading weights:  29%|##9       | 30/103 [00:00<00:00, 1299.00it/s, Materializing param=encoder.layer.1.attention.self.value.bias]Loading weights:  30%|###       | 31/103 [00:00<00:00, 1336.82it/s, Materializing param=encoder.layer.1.attention.self.value.weight]Loading weights:  30%|###       | 31/103 [00:00<00:00, 1333.77it/s, Materializing param=encoder.layer.1.attention.self.value.weight]Loading weights:  31%|###1      | 32/103 [00:00<00:00, 1371.37it/s, Materializing param=encoder.layer.1.intermediate.dense.bias]    Loading weights:  31%|###1      | 32/103 [00:00<00:00, 1368.33it/s, Materializing param=encoder.layer.1.intermediate.dense.bias]Loading weights:  32%|###2      | 33/103 [00:00<00:00, 1405.71it/s, Materializing param=encoder.layer.1.intermediate.dense.weight]Loading weights:  32%|###2      | 33/103 [00:00<00:00, 1402.76it/s, Materializing param=encoder.layer.1.intermediate.dense.weight]Loading weights:  33%|###3      | 34/103 [00:00<00:00, 1439.97it/s, Materializing param=encoder.layer.1.output.LayerNorm.bias]    Loading weights:  33%|###3      | 34/103 [00:00<00:00, 1436.84it/s, Materializing param=encoder.layer.1.output.LayerNorm.bias]Loading weights:  34%|###3      | 35/103 [00:00<00:00, 1473.40it/s, Materializing param=encoder.layer.1.output.LayerNorm.weight]Loading weights:  34%|###3      | 35/103 [00:00<00:00, 1470.39it/s, Materializing param=encoder.layer.1.output.LayerNorm.weight]Loading weights:  35%|###4      | 36/103 [00:00<00:00, 1502.47it/s, Materializing param=encoder.layer.1.output.dense.bias]      Loading weights:  35%|###4      | 36/103 [00:00<00:00, 1498.87it/s, Materializing param=encoder.layer.1.output.dense.bias]Loading weights:  36%|###5      | 37/103 [00:00<00:00, 1534.58it/s, Materializing param=encoder.layer.1.output.dense.weight]Loading weights:  36%|###5      | 37/103 [00:00<00:00, 1531.43it/s, Materializing param=encoder.layer.1.output.dense.weight]Loading weights:  37%|###6      | 38/103 [00:00<00:00, 1567.30it/s, Materializing param=encoder.layer.2.attention.output.LayerNorm.bias]Loading weights:  37%|###6      | 38/103 [00:00<00:00, 1564.16it/s, Materializing param=encoder.layer.2.attention.output.LayerNorm.bias]Loading weights:  38%|###7      | 39/103 [00:00<00:00, 1599.28it/s, Materializing param=encoder.layer.2.attention.output.LayerNorm.weight]Loading weights:  38%|###7      | 39/103 [00:00<00:00, 1596.18it/s, Materializing param=encoder.layer.2.attention.output.LayerNorm.weight]Loading weights:  39%|###8      | 40/103 [00:00<00:00, 1631.76it/s, Materializing param=encoder.layer.2.attention.output.dense.bias]      Loading weights:  39%|###8      | 40/103 [00:00<00:00, 1628.68it/s, Materializing param=encoder.layer.2.attention.output.dense.bias]Loading weights:  40%|###9      | 41/103 [00:00<00:00, 1663.99it/s, Materializing param=encoder.layer.2.attention.output.dense.weight]Loading weights:  40%|###9      | 41/103 [00:00<00:00, 1660.76it/s, Materializing param=encoder.layer.2.attention.output.dense.weight]Loading weights:  41%|####      | 42/103 [00:00<00:00, 1695.66it/s, Materializing param=encoder.layer.2.attention.self.key.bias]      Loading weights:  41%|####      | 42/103 [00:00<00:00, 1692.45it/s, Materializing param=encoder.layer.2.attention.self.key.bias]Loading weights:  42%|####1     | 43/103 [00:00<00:00, 1727.26it/s, Materializing param=encoder.layer.2.attention.self.key.weight]Loading weights:  42%|####1     | 43/103 [00:00<00:00, 1722.23it/s, Materializing param=encoder.layer.2.attention.self.key.weight]Loading weights:  43%|####2     | 44/103 [00:00<00:00, 1755.69it/s, Materializing param=encoder.layer.2.attention.self.query.bias]Loading weights:  43%|####2     | 44/103 [00:00<00:00, 1752.52it/s, Materializing param=encoder.layer.2.attention.self.query.bias]Loading weights:  44%|####3     | 45/103 [00:00<00:00, 1786.65it/s, Materializing param=encoder.layer.2.attention.self.query.weight]Loading weights:  44%|####3     | 45/103 [00:00<00:00, 1783.53it/s, Materializing param=encoder.layer.2.attention.self.query.weight]Loading weights:  45%|####4     | 46/103 [00:00<00:00, 1817.34it/s, Materializing param=encoder.layer.2.attention.self.value.bias]  Loading weights:  45%|####4     | 46/103 [00:00<00:00, 1814.26it/s, Materializing param=encoder.layer.2.attention.self.value.bias]Loading weights:  46%|####5     | 47/103 [00:00<00:00, 1848.21it/s, Materializing param=encoder.layer.2.attention.self.value.weight]Loading weights:  46%|####5     | 47/103 [00:00<00:00, 1845.19it/s, Materializing param=encoder.layer.2.attention.self.value.weight]Loading weights:  47%|####6     | 48/103 [00:00<00:00, 1878.84it/s, Materializing param=encoder.layer.2.intermediate.dense.bias]    Loading weights:  47%|####6     | 48/103 [00:00<00:00, 1875.70it/s, Materializing param=encoder.layer.2.intermediate.dense.bias]Loading weights:  48%|####7     | 49/103 [00:00<00:00, 1909.30it/s, Materializing param=encoder.layer.2.intermediate.dense.weight]Loading weights:  48%|####7     | 49/103 [00:00<00:00, 1906.02it/s, Materializing param=encoder.layer.2.intermediate.dense.weight]Loading weights:  49%|####8     | 50/103 [00:00<00:00, 1939.44it/s, Materializing param=encoder.layer.2.output.LayerNorm.bias]    Loading weights:  49%|####8     | 50/103 [00:00<00:00, 1936.25it/s, Materializing param=encoder.layer.2.output.LayerNorm.bias]Loading weights:  50%|####9     | 51/103 [00:00<00:00, 1969.39it/s, Materializing param=encoder.layer.2.output.LayerNorm.weight]Loading weights:  50%|####9     | 51/103 [00:00<00:00, 1966.01it/s, Materializing param=encoder.layer.2.output.LayerNorm.weight]Loading weights:  50%|#####     | 52/103 [00:00<00:00, 1995.64it/s, Materializing param=encoder.layer.2.output.dense.bias]      Loading weights:  50%|#####     | 52/103 [00:00<00:00, 1992.05it/s, Materializing param=encoder.layer.2.output.dense.bias]Loading weights:  51%|#####1    | 53/103 [00:00<00:00, 2024.43it/s, Materializing param=encoder.layer.2.output.dense.weight]Loading weights:  51%|#####1    | 53/103 [00:00<00:00, 2021.22it/s, Materializing param=encoder.layer.2.output.dense.weight]Loading weights:  52%|#####2    | 54/103 [00:00<00:00, 2053.68it/s, Materializing param=encoder.layer.3.attention.output.LayerNorm.bias]Loading weights:  52%|#####2    | 54/103 [00:00<00:00, 2050.37it/s, Materializing param=encoder.layer.3.attention.output.LayerNorm.bias]Loading weights:  53%|#####3    | 55/103 [00:00<00:00, 2082.29it/s, Materializing param=encoder.layer.3.attention.output.LayerNorm.weight]Loading weights:  53%|#####3    | 55/103 [00:00<00:00, 2078.93it/s, Materializing param=encoder.layer.3.attention.output.LayerNorm.weight]Loading weights:  54%|#####4    | 56/103 [00:00<00:00, 2110.72it/s, Materializing param=encoder.layer.3.attention.output.dense.bias]      Loading weights:  54%|#####4    | 56/103 [00:00<00:00, 2107.37it/s, Materializing param=encoder.layer.3.attention.output.dense.bias]Loading weights:  55%|#####5    | 57/103 [00:00<00:00, 2139.26it/s, Materializing param=encoder.layer.3.attention.output.dense.weight]Loading weights:  55%|#####5    | 57/103 [00:00<00:00, 2130.80it/s, Materializing param=encoder.layer.3.attention.output.dense.weight]Loading weights:  56%|#####6    | 58/103 [00:00<00:00, 2161.26it/s, Materializing param=encoder.layer.3.attention.self.key.bias]      Loading weights:  56%|#####6    | 58/103 [00:00<00:00, 2157.93it/s, Materializing param=encoder.layer.3.attention.self.key.bias]Loading weights:  57%|#####7    | 59/103 [00:00<00:00, 2182.51it/s, Materializing param=encoder.layer.3.attention.self.key.weight]Loading weights:  57%|#####7    | 59/103 [00:00<00:00, 2175.30it/s, Materializing param=encoder.layer.3.attention.self.key.weight]Loading weights:  58%|#####8    | 60/103 [00:00<00:00, 2203.72it/s, Materializing param=encoder.layer.3.attention.self.query.bias]Loading weights:  58%|#####8    | 60/103 [00:00<00:00, 2199.87it/s, Materializing param=encoder.layer.3.attention.self.query.bias]Loading weights:  59%|#####9    | 61/103 [00:00<00:00, 2229.34it/s, Materializing param=encoder.layer.3.attention.self.query.weight]Loading weights:  59%|#####9    | 61/103 [00:00<00:00, 2225.66it/s, Materializing param=encoder.layer.3.attention.self.query.weight]Loading weights:  60%|######    | 62/103 [00:00<00:00, 2255.33it/s, Materializing param=encoder.layer.3.attention.self.value.bias]  Loading weights:  60%|######    | 62/103 [00:00<00:00, 2251.74it/s, Materializing param=encoder.layer.3.attention.self.value.bias]Loading weights:  61%|######1   | 63/103 [00:00<00:00, 2281.82it/s, Materializing param=encoder.layer.3.attention.self.value.weight]Loading weights:  61%|######1   | 63/103 [00:00<00:00, 2278.45it/s, Materializing param=encoder.layer.3.attention.self.value.weight]Loading weights:  62%|######2   | 64/103 [00:00<00:00, 2308.45it/s, Materializing param=encoder.layer.3.intermediate.dense.bias]    Loading weights:  62%|######2   | 64/103 [00:00<00:00, 2305.00it/s, Materializing param=encoder.layer.3.intermediate.dense.bias]Loading weights:  63%|######3   | 65/103 [00:00<00:00, 2332.92it/s, Materializing param=encoder.layer.3.intermediate.dense.weight]Loading weights:  63%|######3   | 65/103 [00:00<00:00, 2328.97it/s, Materializing param=encoder.layer.3.intermediate.dense.weight]Loading weights:  64%|######4   | 66/103 [00:00<00:00, 2358.18it/s, Materializing param=encoder.layer.3.output.LayerNorm.bias]    Loading weights:  64%|######4   | 66/103 [00:00<00:00, 2354.61it/s, Materializing param=encoder.layer.3.output.LayerNorm.bias]Loading weights:  65%|######5   | 67/103 [00:00<00:00, 2383.96it/s, Materializing param=encoder.layer.3.output.LayerNorm.weight]Loading weights:  65%|######5   | 67/103 [00:00<00:00, 2380.54it/s, Materializing param=encoder.layer.3.output.LayerNorm.weight]Loading weights:  66%|######6   | 68/103 [00:00<00:00, 2409.85it/s, Materializing param=encoder.layer.3.output.dense.bias]      Loading weights:  66%|######6   | 68/103 [00:00<00:00, 2406.39it/s, Materializing param=encoder.layer.3.output.dense.bias]Loading weights:  67%|######6   | 69/103 [00:00<00:00, 2435.70it/s, Materializing param=encoder.layer.3.output.dense.weight]Loading weights:  67%|######6   | 69/103 [00:00<00:00, 2432.07it/s, Materializing param=encoder.layer.3.output.dense.weight]Loading weights:  68%|######7   | 70/103 [00:00<00:00, 2461.05it/s, Materializing param=encoder.layer.4.attention.output.LayerNorm.bias]Loading weights:  68%|######7   | 70/103 [00:00<00:00, 2457.39it/s, Materializing param=encoder.layer.4.attention.output.LayerNorm.bias]Loading weights:  69%|######8   | 71/103 [00:00<00:00, 2485.84it/s, Materializing param=encoder.layer.4.attention.output.LayerNorm.weight]Loading weights:  69%|######8   | 71/103 [00:00<00:00, 2482.27it/s, Materializing param=encoder.layer.4.attention.output.LayerNorm.weight]Loading weights:  70%|######9   | 72/103 [00:00<00:00, 2510.87it/s, Materializing param=encoder.layer.4.attention.output.dense.bias]      Loading weights:  70%|######9   | 72/103 [00:00<00:00, 2507.18it/s, Materializing param=encoder.layer.4.attention.output.dense.bias]Loading weights:  71%|#######   | 73/103 [00:00<00:00, 2535.29it/s, Materializing param=encoder.layer.4.attention.output.dense.weight]Loading weights:  71%|#######   | 73/103 [00:00<00:00, 2529.67it/s, Materializing param=encoder.layer.4.attention.output.dense.weight]Loading weights:  72%|#######1  | 74/103 [00:00<00:00, 2556.45it/s, Materializing param=encoder.layer.4.attention.self.key.bias]      Loading weights:  72%|#######1  | 74/103 [00:00<00:00, 2552.64it/s, Materializing param=encoder.layer.4.attention.self.key.bias]Loading weights:  73%|#######2  | 75/103 [00:00<00:00, 2580.45it/s, Materializing param=encoder.layer.4.attention.self.key.weight]Loading weights:  73%|#######2  | 75/103 [00:00<00:00, 2576.54it/s, Materializing param=encoder.layer.4.attention.self.key.weight]Loading weights:  74%|#######3  | 76/103 [00:00<00:00, 2604.11it/s, Materializing param=encoder.layer.4.attention.self.query.bias]Loading weights:  74%|#######3  | 76/103 [00:00<00:00, 2600.29it/s, Materializing param=encoder.layer.4.attention.self.query.bias]Loading weights:  75%|#######4  | 77/103 [00:00<00:00, 2627.88it/s, Materializing param=encoder.layer.4.attention.self.query.weight]Loading weights:  75%|#######4  | 77/103 [00:00<00:00, 2624.10it/s, Materializing param=encoder.layer.4.attention.self.query.weight]Loading weights:  76%|#######5  | 78/103 [00:00<00:00, 2651.48it/s, Materializing param=encoder.layer.4.attention.self.value.bias]  Loading weights:  76%|#######5  | 78/103 [00:00<00:00, 2647.49it/s, Materializing param=encoder.layer.4.attention.self.value.bias]Loading weights:  77%|#######6  | 79/103 [00:00<00:00, 2674.36it/s, Materializing param=encoder.layer.4.attention.self.value.weight]Loading weights:  77%|#######6  | 79/103 [00:00<00:00, 2670.28it/s, Materializing param=encoder.layer.4.attention.self.value.weight]Loading weights:  78%|#######7  | 80/103 [00:00<00:00, 2697.15it/s, Materializing param=encoder.layer.4.intermediate.dense.bias]    Loading weights:  78%|#######7  | 80/103 [00:00<00:00, 2693.21it/s, Materializing param=encoder.layer.4.intermediate.dense.bias]Loading weights:  79%|#######8  | 81/103 [00:00<00:00, 2719.98it/s, Materializing param=encoder.layer.4.intermediate.dense.weight]Loading weights:  79%|#######8  | 81/103 [00:00<00:00, 2715.98it/s, Materializing param=encoder.layer.4.intermediate.dense.weight]Loading weights:  80%|#######9  | 82/103 [00:00<00:00, 2717.66it/s, Materializing param=encoder.layer.4.output.LayerNorm.bias]    Loading weights:  80%|#######9  | 82/103 [00:00<00:00, 2706.11it/s, Materializing param=encoder.layer.4.output.LayerNorm.bias]Loading weights:  81%|########  | 83/103 [00:00<00:00, 2720.04it/s, Materializing param=encoder.layer.4.output.LayerNorm.weight]Loading weights:  81%|########  | 83/103 [00:00<00:00, 2713.38it/s, Materializing param=encoder.layer.4.output.LayerNorm.weight]Loading weights:  82%|########1 | 84/103 [00:00<00:00, 2736.95it/s, Materializing param=encoder.layer.4.output.dense.bias]      Loading weights:  82%|########1 | 84/103 [00:00<00:00, 2732.30it/s, Materializing param=encoder.layer.4.output.dense.bias]Loading weights:  83%|########2 | 85/103 [00:00<00:00, 2756.08it/s, Materializing param=encoder.layer.4.output.dense.weight]Loading weights:  83%|########2 | 85/103 [00:00<00:00, 2751.40it/s, Materializing param=encoder.layer.4.output.dense.weight]Loading weights:  83%|########3 | 86/103 [00:00<00:00, 2775.80it/s, Materializing param=encoder.layer.5.attention.output.LayerNorm.bias]Loading weights:  83%|########3 | 86/103 [00:00<00:00, 2770.60it/s, Materializing param=encoder.layer.5.attention.output.LayerNorm.bias]Loading weights:  84%|########4 | 87/103 [00:00<00:00, 2790.62it/s, Materializing param=encoder.layer.5.attention.output.LayerNorm.weight]Loading weights:  84%|########4 | 87/103 [00:00<00:00, 2784.87it/s, Materializing param=encoder.layer.5.attention.output.LayerNorm.weight]Loading weights:  85%|########5 | 88/103 [00:00<00:00, 2808.18it/s, Materializing param=encoder.layer.5.attention.output.dense.bias]      Loading weights:  85%|########5 | 88/103 [00:00<00:00, 2802.98it/s, Materializing param=encoder.layer.5.attention.output.dense.bias]Loading weights:  86%|########6 | 89/103 [00:00<00:00, 2825.97it/s, Materializing param=encoder.layer.5.attention.output.dense.weight]Loading weights:  86%|########6 | 89/103 [00:00<00:00, 2821.48it/s, Materializing param=encoder.layer.5.attention.output.dense.weight]Loading weights:  87%|########7 | 90/103 [00:00<00:00, 2845.50it/s, Materializing param=encoder.layer.5.attention.self.key.bias]      Loading weights:  87%|########7 | 90/103 [00:00<00:00, 2841.28it/s, Materializing param=encoder.layer.5.attention.self.key.bias]Loading weights:  88%|########8 | 91/103 [00:00<00:00, 2864.98it/s, Materializing param=encoder.layer.5.attention.self.key.weight]Loading weights:  88%|########8 | 91/103 [00:00<00:00, 2860.54it/s, Materializing param=encoder.layer.5.attention.self.key.weight]Loading weights:  89%|########9 | 92/103 [00:00<00:00, 2880.60it/s, Materializing param=encoder.layer.5.attention.self.query.bias]Loading weights:  89%|########9 | 92/103 [00:00<00:00, 2875.98it/s, Materializing param=encoder.layer.5.attention.self.query.bias]Loading weights:  90%|######### | 93/103 [00:00<00:00, 2896.06it/s, Materializing param=encoder.layer.5.attention.self.query.weight]Loading weights:  90%|######### | 93/103 [00:00<00:00, 2890.99it/s, Materializing param=encoder.layer.5.attention.self.query.weight]Loading weights:  91%|#########1| 94/103 [00:00<00:00, 2914.39it/s, Materializing param=encoder.layer.5.attention.self.value.bias]  Loading weights:  91%|#########1| 94/103 [00:00<00:00, 2910.15it/s, Materializing param=encoder.layer.5.attention.self.value.bias]Loading weights:  92%|#########2| 95/103 [00:00<00:00, 2933.71it/s, Materializing param=encoder.layer.5.attention.self.value.weight]Loading weights:  92%|#########2| 95/103 [00:00<00:00, 2929.44it/s, Materializing param=encoder.layer.5.attention.self.value.weight]Loading weights:  93%|#########3| 96/103 [00:00<00:00, 2952.72it/s, Materializing param=encoder.layer.5.intermediate.dense.bias]    Loading weights:  93%|#########3| 96/103 [00:00<00:00, 2948.70it/s, Materializing param=encoder.layer.5.intermediate.dense.bias]Loading weights:  94%|#########4| 97/103 [00:00<00:00, 2972.08it/s, Materializing param=encoder.layer.5.intermediate.dense.weight]Loading weights:  94%|#########4| 97/103 [00:00<00:00, 2968.19it/s, Materializing param=encoder.layer.5.intermediate.dense.weight]Loading weights:  95%|#########5| 98/103 [00:00<00:00, 2991.64it/s, Materializing param=encoder.layer.5.output.LayerNorm.bias]    Loading weights:  95%|#########5| 98/103 [00:00<00:00, 2987.70it/s, Materializing param=encoder.layer.5.output.LayerNorm.bias]Loading weights:  96%|#########6| 99/103 [00:00<00:00, 3011.20it/s, Materializing param=encoder.layer.5.output.LayerNorm.weight]Loading weights:  96%|#########6| 99/103 [00:00<00:00, 3007.30it/s, Materializing param=encoder.layer.5.output.LayerNorm.weight]Loading weights:  97%|#########7| 100/103 [00:00<00:00, 3030.89it/s, Materializing param=encoder.layer.5.output.dense.bias]     Loading weights:  97%|#########7| 100/103 [00:00<00:00, 3027.02it/s, Materializing param=encoder.layer.5.output.dense.bias]Loading weights:  98%|#########8| 101/103 [00:00<00:00, 3050.34it/s, Materializing param=encoder.layer.5.output.dense.weight]Loading weights:  98%|#########8| 101/103 [00:00<00:00, 3046.39it/s, Materializing param=encoder.layer.5.output.dense.weight]Loading weights:  99%|#########9| 102/103 [00:00<00:00, 3069.77it/s, Materializing param=pooler.dense.bias]                  Loading weights:  99%|#########9| 102/103 [00:00<00:00, 3065.90it/s, Materializing param=pooler.dense.bias]Loading weights: 100%|##########| 103/103 [00:00<00:00, 3089.23it/s, Materializing param=pooler.dense.weight]Loading weights: 100%|##########| 103/103 [00:00<00:00, 3085.48it/s, Materializing param=pooler.dense.weight]Loading weights: 100%|##########| 103/103 [00:00<00:00, 3077.68it/s, Materializing param=pooler.dense.weight]
+[1mBertModel LOAD REPORT[0m from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+INFO:     127.0.0.1:51846 - "GET /api/activity/summary?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53001 - "GET /api/activity/summary?days=30 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53354 - "GET /api/activity/summary?days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65384 - "GET /api/activity/summary?days=14 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63288 - "GET /api/activity/summary?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65384 - "GET /api/activity/summary?days=7 HTTP/1.1" 200 OK
+OpenRouter error 400 on oxalpha: {"error":{"message":"oxalpha is not a valid model ID","code":400},"user_id":"user_3I3kPq2h63b6x8Zlpb9mMwSaz0Y"}
+INFO:     127.0.0.1:61802 - "POST /api/brain/ask HTTP/1.1" 200 OK
+INFO:     Started server process [2532]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:52215 - "GET /api/graph?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52215 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52215 - "GET /api/classify/rules HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52215 - "GET /api/classify/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52215 - "GET /api/windows/closed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52215 - "GET /api/windows/browser-sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52576 - "POST /api/brain/embed-all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52576 - "POST /api/brain/embed-all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52576 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     Started server process [4928]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:54926 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51475 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     Started server process [2100]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:64117 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64117 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56708 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56708 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63555 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63555 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63555 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57297 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63642 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63642 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64810 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57860 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58677 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58677 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     Started server process [12380]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:60577 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60577 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54713 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51814 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51814 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50142 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60909 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60909 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53516 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53516 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52614 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     Started server process [12728]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:49219 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49219 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49219 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50186 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50186 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53579 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53579 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59783 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59783 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59783 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59783 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59783 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59783 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59783 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57542 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58390 - "GET /api/graph?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58390 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58390 - "GET /api/classify/rules HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58390 - "GET /api/classify/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58390 - "GET /api/windows/closed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58390 - "GET /api/windows/browser-sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50780 - "DELETE /api/windows/browser-sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56353 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56353 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56353 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56353 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56353 - "GET /api/classify/rules HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56353 - "GET /api/classify/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56353 - "GET /api/windows/closed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56353 - "GET /api/windows/browser-sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54768 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54768 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54768 - "GET /api/classify/rules HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54768 - "GET /api/classify/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54768 - "GET /api/windows/closed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54768 - "GET /api/windows/browser-sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59500 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     Started server process [24920]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     Started server process [27548]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:60435 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60435 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58500 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+OpenRouter error 404 on deepseek/deepseek-v4-flash-0731:free: {"error":{"message":"This model is unavailable for free. The paid version is available now - use this slug instead: deepseek/deepseek-v4-flash-0731","code":404},"user_id":"user_3I3kPq2h63b6x8Zlpb9mMwSaz0Y"}
+INFO:     127.0.0.1:59030 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+OpenRouter error 404 on deepseek/deepseek-v4-flash-0731:free: {"error":{"message":"This model is unavailable for free. The paid version is available now - use this slug instead: deepseek/deepseek-v4-flash-0731","code":404},"user_id":"user_3I3kPq2h63b6x8Zlpb9mMwSaz0Y"}
+INFO:     127.0.0.1:59030 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+OpenRouter error 404 on deepseek/deepseek-v4-flash-0731:free: {"error":{"message":"This model is unavailable for free. The paid version is available now - use this slug instead: deepseek/deepseek-v4-flash-0731","code":404},"user_id":"user_3I3kPq2h63b6x8Zlpb9mMwSaz0Y"}
+INFO:     127.0.0.1:64341 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64341 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52988 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52988 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52368 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52368 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57661 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57661 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54726 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54726 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62996 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62996 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60163 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60163 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60436 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60436 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60580 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60580 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60580 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54720 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54720 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55466 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55466 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63603 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63603 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51073 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51073 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51073 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+OpenRouter error 404 on deepseek/deepseek-v4-flash-0731:free: {"error":{"message":"This model is unavailable for free. The paid version is available now - use this slug instead: deepseek/deepseek-v4-flash-0731","code":404},"user_id":"user_3I3kPq2h63b6x8Zlpb9mMwSaz0Y"}
+INFO:     127.0.0.1:62822 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62822 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62822 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+OpenRouter error 404 on deepseek/deepseek-v4-flash-0731:free: {"error":{"message":"This model is unavailable for free. The paid version is available now - use this slug instead: deepseek/deepseek-v4-flash-0731","code":404},"user_id":"user_3I3kPq2h63b6x8Zlpb9mMwSaz0Y"}
+INFO:     127.0.0.1:51085 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51085 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50530 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50530 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62842 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50320 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50320 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62247 - "DELETE /api/pages/by-url?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D2nTjUAeD5WE%26list%3DPLBlnK6fEyqRgvHDr09vkJStdmH1CWKq89 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62247 - "DELETE /api/pages/by-url?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DOl8D69VKX2k%26list%3DPLBlnK6fEyqRgLLlzdgiTUKULKJPYc0A4q HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49662 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49662 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59070 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59070 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52936 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52634 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52634 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62384 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62384 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57547 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57547 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53471 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53471 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55005 - "POST /api/groups HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60214 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60214 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60214 - "GET /api/groups HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54220 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54220 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54220 - "GET /api/groups HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52859 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52859 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52859 - "GET /api/groups HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58539 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58539 - "GET /api/groups HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58539 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58539 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58539 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58539 - "GET /api/groups HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:49791 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62536 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62536 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62536 - "GET /api/groups HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62536 - "GET /api/groups HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60866 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60866 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60866 - "GET /api/groups HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55666 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55666 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55666 - "GET /api/groups HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50818 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50818 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50818 - "GET /api/groups HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57193 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57193 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57193 - "GET /api/groups HTTP/1.1" 404 Not Found
+INFO:     Started server process [26744]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:63917 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63917 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     Started server process [24120]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:49796 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49796 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49796 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57946 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57946 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57946 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56957 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56957 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52667 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52667 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56353 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56353 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51595 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51595 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65036 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65036 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65036 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57012 - "POST /api/groups HTTP/1.1" 201 Created
+INFO:     127.0.0.1:52407 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52407 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52407 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59041 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59041 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59965 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59965 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55662 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55662 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55662 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55662 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51156 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51156 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51156 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51156 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51156 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51156 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51156 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51156 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51156 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51156 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58881 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58881 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61355 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61355 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61355 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61472 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55763 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55763 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61872 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61872 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61872 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61872 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61872 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61420 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62663 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62663 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62663 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52824 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64240 - "DELETE /api/groups/1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64240 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64240 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63965 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63213 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58276 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58276 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58276 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58276 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58276 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49412 - "POST /api/groups HTTP/1.1" 201 Created
+INFO:     127.0.0.1:49412 - "DELETE /api/groups/1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64470 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64470 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64470 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64470 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64470 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64470 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64470 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64470 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64470 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64470 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64470 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64470 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64470 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64470 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64470 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64470 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64470 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64470 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64470 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64470 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64470 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64470 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64470 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64470 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64470 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64470 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64470 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54015 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54015 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54015 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59994 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59994 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59994 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59994 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59994 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59994 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59994 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62651 - "POST /api/groups HTTP/1.1" 201 Created
+INFO:     127.0.0.1:62651 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62651 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51441 - "DELETE /api/groups/1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51441 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64335 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64335 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64335 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64335 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64335 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64335 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64335 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64335 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65096 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58616 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58616 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58792 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53754 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53754 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64010 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64010 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52788 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57568 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57568 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53672 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63515 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63515 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63515 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63515 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62005 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62005 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53706 - "POST /api/groups HTTP/1.1" 201 Created
+INFO:     127.0.0.1:53778 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53010 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     Started server process [14784]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:59571 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59571 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56318 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56318 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53518 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53518 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54477 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54477 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59111 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59111 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59111 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59111 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62836 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62815 - "POST /api/groups HTTP/1.1" 201 Created
+INFO:     127.0.0.1:62815 - "DELETE /api/groups/1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64932 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64932 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64932 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64932 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49884 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62608 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62608 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61006 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61006 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61006 - "DELETE /api/groups/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49249 - "POST /api/groups HTTP/1.1" 201 Created
+INFO:     127.0.0.1:51797 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51797 - "DELETE /api/pages/by-url?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Df0PvEs5l1qs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55508 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65082 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65082 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63605 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63605 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49375 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53851 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53851 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56960 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56960 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54816 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54816 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54816 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54816 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60824 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60824 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49764 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65195 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51833 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51833 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51833 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51833 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59364 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59364 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50998 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50998 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51639 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56932 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56932 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56932 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56932 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56932 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65517 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65517 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65517 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65517 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53177 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53177 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53177 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53177 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59381 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59381 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59381 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59381 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64863 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64863 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54836 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54836 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60921 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60921 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60018 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60018 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54520 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54520 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50539 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50539 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53639 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53639 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60759 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60759 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61954 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61954 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60779 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60948 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60948 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60948 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53189 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53189 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53189 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56562 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57123 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57123 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57123 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57123 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57123 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57123 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57123 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57123 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57123 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57123 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57123 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64716 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64716 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64716 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64716 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64716 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49511 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49511 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49511 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49511 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49511 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53342 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53342 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53342 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53342 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53342 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53342 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53342 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58228 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58228 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58228 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58228 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58228 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58228 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58228 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52334 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52334 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52334 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52334 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52334 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52334 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52334 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52334 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59279 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59279 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59279 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59279 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59279 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59279 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59279 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52877 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52877 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52877 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52877 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52877 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52877 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52877 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63459 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54885 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54885 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54885 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54885 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54885 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55457 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55457 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55161 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55161 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55161 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55388 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55388 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60899 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60899 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60899 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60899 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60899 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60899 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60899 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60899 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60899 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60899 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60899 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60899 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60899 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56111 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56111 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56111 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56111 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56111 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58650 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58650 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58650 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54560 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54560 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54560 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52054 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52054 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52054 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52019 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52019 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52019 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52019 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52019 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52019 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52019 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52019 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52019 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52019 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52019 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52019 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53528 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53528 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53528 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     Started server process [32344]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:61208 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61208 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51930 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51930 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61997 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61997 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60152 - "POST /api/groups HTTP/1.1" 201 Created
+INFO:     127.0.0.1:61967 - "DELETE /api/groups/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54004 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54004 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54004 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54004 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53092 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53092 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53092 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53092 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59652 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59652 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62715 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62715 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58531 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58531 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58531 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58531 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60975 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60975 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50429 - "POST /api/groups HTTP/1.1" 201 Created
+INFO:     127.0.0.1:54092 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56854 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56854 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56854 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56854 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59766 - "DELETE /api/groups/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59766 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59766 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59766 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59766 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59766 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59766 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59766 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53529 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53529 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50235 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50235 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52670 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52670 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52670 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52670 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52670 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52670 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52771 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52670 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52771 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52771 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52771 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52670 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52670 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52771 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52771 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52670 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52670 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52670 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52771 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52771 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52670 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59053 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54200 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52771 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52670 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52670 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52670 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52670 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52670 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52670 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52771 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54200 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59053 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52670 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54200 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52771 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52771 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54200 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54200 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52670 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52771 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54200 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59053 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59053 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59053 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59053 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54200 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59053 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54200 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59053 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54200 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59053 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54200 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59053 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54200 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59053 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52771 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59148 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56911 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59148 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56911 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59148 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54503 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61129 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63084 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49870 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56911 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59148 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54503 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59148 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63084 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56911 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49870 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61129 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54503 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54503 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54503 - "POST /api/groups HTTP/1.1" 201 Created
+INFO:     127.0.0.1:53322 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53368 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64567 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53322 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64567 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53368 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53322 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53368 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53322 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53368 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53322 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53368 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53322 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53368 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53322 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53368 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53322 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53368 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53322 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53368 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53322 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53368 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53322 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53368 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53322 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53368 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53322 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53368 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53322 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53368 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56319 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56319 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55876 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55876 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50319 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50319 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50319 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50319 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50319 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62753 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62753 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     Started server process [25848]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:55374 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55374 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52108 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52108 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52108 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52108 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52108 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52108 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52108 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52108 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52108 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52108 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52108 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights:   1%|          | 1/103 [00:00<00:00, 15087.42it/s, Materializing param=embeddings.LayerNorm.bias]Loading weights:   1%|          | 1/103 [00:00<00:00, 6204.59it/s, Materializing param=embeddings.LayerNorm.bias] Loading weights:   2%|1         | 2/103 [00:00<00:00, 5629.94it/s, Materializing param=embeddings.LayerNorm.weight]Loading weights:   2%|1         | 2/103 [00:00<00:00, 1388.84it/s, Materializing param=embeddings.LayerNorm.weight]Loading weights:   3%|2         | 3/103 [00:00<00:00, 1708.01it/s, Materializing param=embeddings.position_embeddings.weight]Loading weights:   3%|2         | 3/103 [00:00<00:00, 1367.41it/s, Materializing param=embeddings.position_embeddings.weight]Loading weights:   4%|3         | 4/103 [00:00<00:00, 1342.28it/s, Materializing param=embeddings.token_type_embeddings.weight]Loading weights:   4%|3         | 4/103 [00:00<00:00, 1242.20it/s, Materializing param=embeddings.token_type_embeddings.weight]Loading weights:   5%|4         | 5/103 [00:00<00:00, 1456.25it/s, Materializing param=embeddings.word_embeddings.weight]      Loading weights:   5%|4         | 5/103 [00:00<00:00, 1223.04it/s, Materializing param=embeddings.word_embeddings.weight]Loading weights:   6%|5         | 6/103 [00:00<00:00, 1166.38it/s, Materializing param=encoder.layer.0.attention.output.LayerNorm.bias]Loading weights:   6%|5         | 6/103 [00:00<00:00, 1064.68it/s, Materializing param=encoder.layer.0.attention.output.LayerNorm.bias]Loading weights:   7%|6         | 7/103 [00:00<00:00, 1071.89it/s, Materializing param=encoder.layer.0.attention.output.LayerNorm.weight]Loading weights:   7%|6         | 7/103 [00:00<00:00, 1053.54it/s, Materializing param=encoder.layer.0.attention.output.LayerNorm.weight]Loading weights:   8%|7         | 8/103 [00:00<00:00, 1172.41it/s, Materializing param=encoder.layer.0.attention.output.dense.bias]      Loading weights:   8%|7         | 8/103 [00:00<00:00, 1162.22it/s, Materializing param=encoder.layer.0.attention.output.dense.bias]Loading weights:   9%|8         | 9/103 [00:00<00:00, 1273.45it/s, Materializing param=encoder.layer.0.attention.output.dense.weight]Loading weights:   9%|8         | 9/103 [00:00<00:00, 1203.11it/s, Materializing param=encoder.layer.0.attention.output.dense.weight]Loading weights:  10%|9         | 10/103 [00:00<00:00, 1283.45it/s, Materializing param=encoder.layer.0.attention.self.key.bias]     Loading weights:  10%|9         | 10/103 [00:00<00:00, 1261.52it/s, Materializing param=encoder.layer.0.attention.self.key.bias]Loading weights:  11%|#         | 11/103 [00:00<00:00, 1321.31it/s, Materializing param=encoder.layer.0.attention.self.key.weight]Loading weights:  11%|#         | 11/103 [00:00<00:00, 1311.73it/s, Materializing param=encoder.layer.0.attention.self.key.weight]Loading weights:  12%|#1        | 12/103 [00:00<00:00, 1335.55it/s, Materializing param=encoder.layer.0.attention.self.query.bias]Loading weights:  12%|#1        | 12/103 [00:00<00:00, 1281.42it/s, Materializing param=encoder.layer.0.attention.self.query.bias]Loading weights:  13%|#2        | 13/103 [00:00<00:00, 1305.64it/s, Materializing param=encoder.layer.0.attention.self.query.weight]Loading weights:  13%|#2        | 13/103 [00:00<00:00, 1229.56it/s, Materializing param=encoder.layer.0.attention.self.query.weight]Loading weights:  14%|#3        | 14/103 [00:00<00:00, 1277.69it/s, Materializing param=encoder.layer.0.attention.self.value.bias]  Loading weights:  14%|#3        | 14/103 [00:00<00:00, 1267.95it/s, Materializing param=encoder.layer.0.attention.self.value.bias]Loading weights:  15%|#4        | 15/103 [00:00<00:00, 1341.23it/s, Materializing param=encoder.layer.0.attention.self.value.weight]Loading weights:  15%|#4        | 15/103 [00:00<00:00, 1334.94it/s, Materializing param=encoder.layer.0.attention.self.value.weight]Loading weights:  16%|#5        | 16/103 [00:00<00:00, 1370.55it/s, Materializing param=encoder.layer.0.intermediate.dense.bias]    Loading weights:  16%|#5        | 16/103 [00:00<00:00, 1331.21it/s, Materializing param=encoder.layer.0.intermediate.dense.bias]Loading weights:  17%|#6        | 17/103 [00:00<00:00, 1367.69it/s, Materializing param=encoder.layer.0.intermediate.dense.weight]Loading weights:  17%|#6        | 17/103 [00:00<00:00, 1358.23it/s, Materializing param=encoder.layer.0.intermediate.dense.weight]Loading weights:  17%|#7        | 18/103 [00:00<00:00, 1423.84it/s, Materializing param=encoder.layer.0.output.LayerNorm.bias]    Loading weights:  17%|#7        | 18/103 [00:00<00:00, 1210.77it/s, Materializing param=encoder.layer.0.output.LayerNorm.bias]Loading weights:  18%|#8        | 19/103 [00:00<00:00, 1254.71it/s, Materializing param=encoder.layer.0.output.LayerNorm.weight]Loading weights:  18%|#8        | 19/103 [00:00<00:00, 1245.71it/s, Materializing param=encoder.layer.0.output.LayerNorm.weight]Loading weights:  19%|#9        | 20/103 [00:00<00:00, 1295.88it/s, Materializing param=encoder.layer.0.output.dense.bias]      Loading weights:  19%|#9        | 20/103 [00:00<00:00, 1287.88it/s, Materializing param=encoder.layer.0.output.dense.bias]Loading weights:  20%|##        | 21/103 [00:00<00:00, 1337.43it/s, Materializing param=encoder.layer.0.output.dense.weight]Loading weights:  20%|##        | 21/103 [00:00<00:00, 1329.62it/s, Materializing param=encoder.layer.0.output.dense.weight]Loading weights:  21%|##1       | 22/103 [00:00<00:00, 1281.66it/s, Materializing param=encoder.layer.1.attention.output.LayerNorm.bias]Loading weights:  21%|##1       | 22/103 [00:00<00:00, 1270.83it/s, Materializing param=encoder.layer.1.attention.output.LayerNorm.bias]Loading weights:  22%|##2       | 23/103 [00:00<00:00, 1310.61it/s, Materializing param=encoder.layer.1.attention.output.LayerNorm.weight]Loading weights:  22%|##2       | 23/103 [00:00<00:00, 1302.75it/s, Materializing param=encoder.layer.1.attention.output.LayerNorm.weight]Loading weights:  23%|##3       | 24/103 [00:00<00:00, 1302.41it/s, Materializing param=encoder.layer.1.attention.output.dense.bias]      Loading weights:  23%|##3       | 24/103 [00:00<00:00, 1293.49it/s, Materializing param=encoder.layer.1.attention.output.dense.bias]Loading weights:  24%|##4       | 25/103 [00:00<00:00, 1333.74it/s, Materializing param=encoder.layer.1.attention.output.dense.weight]Loading weights:  24%|##4       | 25/103 [00:00<00:00, 1327.16it/s, Materializing param=encoder.layer.1.attention.output.dense.weight]Loading weights:  25%|##5       | 26/103 [00:00<00:00, 1368.04it/s, Materializing param=encoder.layer.1.attention.self.key.bias]      Loading weights:  25%|##5       | 26/103 [00:00<00:00, 1361.57it/s, Materializing param=encoder.layer.1.attention.self.key.bias]Loading weights:  26%|##6       | 27/103 [00:00<00:00, 1401.25it/s, Materializing param=encoder.layer.1.attention.self.key.weight]Loading weights:  26%|##6       | 27/103 [00:00<00:00, 1394.66it/s, Materializing param=encoder.layer.1.attention.self.key.weight]Loading weights:  27%|##7       | 28/103 [00:00<00:00, 1433.93it/s, Materializing param=encoder.layer.1.attention.self.query.bias]Loading weights:  27%|##7       | 28/103 [00:00<00:00, 1427.45it/s, Materializing param=encoder.layer.1.attention.self.query.bias]Loading weights:  28%|##8       | 29/103 [00:00<00:00, 1465.71it/s, Materializing param=encoder.layer.1.attention.self.query.weight]Loading weights:  28%|##8       | 29/103 [00:00<00:00, 1458.61it/s, Materializing param=encoder.layer.1.attention.self.query.weight]Loading weights:  29%|##9       | 30/103 [00:00<00:00, 1476.31it/s, Materializing param=encoder.layer.1.attention.self.value.bias]  Loading weights:  29%|##9       | 30/103 [00:00<00:00, 1467.51it/s, Materializing param=encoder.layer.1.attention.self.value.bias]Loading weights:  30%|###       | 31/103 [00:00<00:00, 1502.43it/s, Materializing param=encoder.layer.1.attention.self.value.weight]Loading weights:  30%|###       | 31/103 [00:00<00:00, 1495.38it/s, Materializing param=encoder.layer.1.attention.self.value.weight]Loading weights:  31%|###1      | 32/103 [00:00<00:00, 1493.32it/s, Materializing param=encoder.layer.1.intermediate.dense.bias]    Loading weights:  31%|###1      | 32/103 [00:00<00:00, 1481.76it/s, Materializing param=encoder.layer.1.intermediate.dense.bias]Loading weights:  32%|###2      | 33/103 [00:00<00:00, 1502.31it/s, Materializing param=encoder.layer.1.intermediate.dense.weight]Loading weights:  32%|###2      | 33/103 [00:00<00:00, 1484.14it/s, Materializing param=encoder.layer.1.intermediate.dense.weight]Loading weights:  33%|###3      | 34/103 [00:00<00:00, 1401.69it/s, Materializing param=encoder.layer.1.output.LayerNorm.bias]    Loading weights:  33%|###3      | 34/103 [00:00<00:00, 1391.48it/s, Materializing param=encoder.layer.1.output.LayerNorm.bias]Loading weights:  34%|###3      | 35/103 [00:00<00:00, 1416.07it/s, Materializing param=encoder.layer.1.output.LayerNorm.weight]Loading weights:  34%|###3      | 35/103 [00:00<00:00, 1396.39it/s, Materializing param=encoder.layer.1.output.LayerNorm.weight]Loading weights:  35%|###4      | 36/103 [00:00<00:00, 1417.17it/s, Materializing param=encoder.layer.1.output.dense.bias]      Loading weights:  35%|###4      | 36/103 [00:00<00:00, 1370.60it/s, Materializing param=encoder.layer.1.output.dense.bias]Loading weights:  36%|###5      | 37/103 [00:00<00:00, 1388.07it/s, Materializing param=encoder.layer.1.output.dense.weight]Loading weights:  36%|###5      | 37/103 [00:00<00:00, 1362.77it/s, Materializing param=encoder.layer.1.output.dense.weight]Loading weights:  37%|###6      | 38/103 [00:00<00:00, 1328.10it/s, Materializing param=encoder.layer.2.attention.output.LayerNorm.bias]Loading weights:  37%|###6      | 38/103 [00:00<00:00, 1319.51it/s, Materializing param=encoder.layer.2.attention.output.LayerNorm.bias]Loading weights:  38%|###7      | 39/103 [00:00<00:00, 1327.13it/s, Materializing param=encoder.layer.2.attention.output.LayerNorm.weight]Loading weights:  38%|###7      | 39/103 [00:00<00:00, 1318.44it/s, Materializing param=encoder.layer.2.attention.output.LayerNorm.weight]Loading weights:  39%|###8      | 40/103 [00:00<00:00, 1340.55it/s, Materializing param=encoder.layer.2.attention.output.dense.bias]      Loading weights:  39%|###8      | 40/103 [00:00<00:00, 1334.84it/s, Materializing param=encoder.layer.2.attention.output.dense.bias]Loading weights:  40%|###9      | 41/103 [00:00<00:00, 1325.96it/s, Materializing param=encoder.layer.2.attention.output.dense.weight]Loading weights:  40%|###9      | 41/103 [00:00<00:00, 1319.03it/s, Materializing param=encoder.layer.2.attention.output.dense.weight]Loading weights:  41%|####      | 42/103 [00:00<00:00, 1340.73it/s, Materializing param=encoder.layer.2.attention.self.key.bias]      Loading weights:  41%|####      | 42/103 [00:00<00:00, 1335.83it/s, Materializing param=encoder.layer.2.attention.self.key.bias]Loading weights:  42%|####1     | 43/103 [00:00<00:00, 1358.83it/s, Materializing param=encoder.layer.2.attention.self.key.weight]Loading weights:  42%|####1     | 43/103 [00:00<00:00, 1351.14it/s, Materializing param=encoder.layer.2.attention.self.key.weight]Loading weights:  43%|####2     | 44/103 [00:00<00:00, 1370.98it/s, Materializing param=encoder.layer.2.attention.self.query.bias]Loading weights:  43%|####2     | 44/103 [00:00<00:00, 1366.67it/s, Materializing param=encoder.layer.2.attention.self.query.bias]Loading weights:  44%|####3     | 45/103 [00:00<00:00, 1389.97it/s, Materializing param=encoder.layer.2.attention.self.query.weight]Loading weights:  44%|####3     | 45/103 [00:00<00:00, 1384.90it/s, Materializing param=encoder.layer.2.attention.self.query.weight]Loading weights:  45%|####4     | 46/103 [00:00<00:00, 1407.94it/s, Materializing param=encoder.layer.2.attention.self.value.bias]  Loading weights:  45%|####4     | 46/103 [00:00<00:00, 1403.83it/s, Materializing param=encoder.layer.2.attention.self.value.bias]Loading weights:  46%|####5     | 47/103 [00:00<00:00, 1427.13it/s, Materializing param=encoder.layer.2.attention.self.value.weight]Loading weights:  46%|####5     | 47/103 [00:00<00:00, 1423.19it/s, Materializing param=encoder.layer.2.attention.self.value.weight]Loading weights:  47%|####6     | 48/103 [00:00<00:00, 1446.24it/s, Materializing param=encoder.layer.2.intermediate.dense.bias]    Loading weights:  47%|####6     | 48/103 [00:00<00:00, 1442.23it/s, Materializing param=encoder.layer.2.intermediate.dense.bias]Loading weights:  48%|####7     | 49/103 [00:00<00:00, 1465.03it/s, Materializing param=encoder.layer.2.intermediate.dense.weight]Loading weights:  48%|####7     | 49/103 [00:00<00:00, 1461.07it/s, Materializing param=encoder.layer.2.intermediate.dense.weight]Loading weights:  49%|####8     | 50/103 [00:00<00:00, 1483.93it/s, Materializing param=encoder.layer.2.output.LayerNorm.bias]    Loading weights:  49%|####8     | 50/103 [00:00<00:00, 1479.91it/s, Materializing param=encoder.layer.2.output.LayerNorm.bias]Loading weights:  50%|####9     | 51/103 [00:00<00:00, 1446.20it/s, Materializing param=encoder.layer.2.output.LayerNorm.weight]Loading weights:  50%|####9     | 51/103 [00:00<00:00, 1433.34it/s, Materializing param=encoder.layer.2.output.LayerNorm.weight]Loading weights:  50%|#####     | 52/103 [00:00<00:00, 1449.62it/s, Materializing param=encoder.layer.2.output.dense.bias]      Loading weights:  50%|#####     | 52/103 [00:00<00:00, 1446.05it/s, Materializing param=encoder.layer.2.output.dense.bias]Loading weights:  51%|#####1    | 53/103 [00:00<00:00, 1466.33it/s, Materializing param=encoder.layer.2.output.dense.weight]Loading weights:  51%|#####1    | 53/103 [00:00<00:00, 1463.69it/s, Materializing param=encoder.layer.2.output.dense.weight]Loading weights:  52%|#####2    | 54/103 [00:00<00:00, 1486.56it/s, Materializing param=encoder.layer.3.attention.output.LayerNorm.bias]Loading weights:  52%|#####2    | 54/103 [00:00<00:00, 1484.42it/s, Materializing param=encoder.layer.3.attention.output.LayerNorm.bias]Loading weights:  53%|#####3    | 55/103 [00:00<00:00, 1507.11it/s, Materializing param=encoder.layer.3.attention.output.LayerNorm.weight]Loading weights:  53%|#####3    | 55/103 [00:00<00:00, 1505.06it/s, Materializing param=encoder.layer.3.attention.output.LayerNorm.weight]Loading weights:  54%|#####4    | 56/103 [00:00<00:00, 1528.23it/s, Materializing param=encoder.layer.3.attention.output.dense.bias]      Loading weights:  54%|#####4    | 56/103 [00:00<00:00, 1526.17it/s, Materializing param=encoder.layer.3.attention.output.dense.bias]Loading weights:  55%|#####5    | 57/103 [00:00<00:00, 1549.19it/s, Materializing param=encoder.layer.3.attention.output.dense.weight]Loading weights:  55%|#####5    | 57/103 [00:00<00:00, 1547.11it/s, Materializing param=encoder.layer.3.attention.output.dense.weight]Loading weights:  56%|#####6    | 58/103 [00:00<00:00, 1569.23it/s, Materializing param=encoder.layer.3.attention.self.key.bias]      Loading weights:  56%|#####6    | 58/103 [00:00<00:00, 1566.86it/s, Materializing param=encoder.layer.3.attention.self.key.bias]Loading weights:  57%|#####7    | 59/103 [00:00<00:00, 1576.93it/s, Materializing param=encoder.layer.3.attention.self.key.weight]Loading weights:  57%|#####7    | 59/103 [00:00<00:00, 1574.39it/s, Materializing param=encoder.layer.3.attention.self.key.weight]Loading weights:  58%|#####8    | 60/103 [00:00<00:00, 1577.51it/s, Materializing param=encoder.layer.3.attention.self.query.bias]Loading weights:  58%|#####8    | 60/103 [00:00<00:00, 1554.29it/s, Materializing param=encoder.layer.3.attention.self.query.bias]Loading weights:  59%|#####9    | 61/103 [00:00<00:00, 1555.01it/s, Materializing param=encoder.layer.3.attention.self.query.weight]Loading weights:  59%|#####9    | 61/103 [00:00<00:00, 1550.96it/s, Materializing param=encoder.layer.3.attention.self.query.weight]Loading weights:  60%|######    | 62/103 [00:00<00:00, 1569.97it/s, Materializing param=encoder.layer.3.attention.self.value.bias]  Loading weights:  60%|######    | 62/103 [00:00<00:00, 1535.98it/s, Materializing param=encoder.layer.3.attention.self.value.bias]Loading weights:  61%|######1   | 63/103 [00:00<00:00, 1552.33it/s, Materializing param=encoder.layer.3.attention.self.value.weight]Loading weights:  61%|######1   | 63/103 [00:00<00:00, 1549.39it/s, Materializing param=encoder.layer.3.attention.self.value.weight]Loading weights:  62%|######2   | 64/103 [00:00<00:00, 1561.15it/s, Materializing param=encoder.layer.3.intermediate.dense.bias]    Loading weights:  62%|######2   | 64/103 [00:00<00:00, 1553.82it/s, Materializing param=encoder.layer.3.intermediate.dense.bias]Loading weights:  63%|######3   | 65/103 [00:00<00:00, 1568.49it/s, Materializing param=encoder.layer.3.intermediate.dense.weight]Loading weights:  63%|######3   | 65/103 [00:00<00:00, 1565.24it/s, Materializing param=encoder.layer.3.intermediate.dense.weight]Loading weights:  64%|######4   | 66/103 [00:00<00:00, 1552.55it/s, Materializing param=encoder.layer.3.output.LayerNorm.bias]    Loading weights:  64%|######4   | 66/103 [00:00<00:00, 1546.17it/s, Materializing param=encoder.layer.3.output.LayerNorm.bias]Loading weights:  65%|######5   | 67/103 [00:00<00:00, 1561.56it/s, Materializing param=encoder.layer.3.output.LayerNorm.weight]Loading weights:  65%|######5   | 67/103 [00:00<00:00, 1558.55it/s, Materializing param=encoder.layer.3.output.LayerNorm.weight]Loading weights:  66%|######6   | 68/103 [00:00<00:00, 1569.99it/s, Materializing param=encoder.layer.3.output.dense.bias]      Loading weights:  66%|######6   | 68/103 [00:00<00:00, 1564.75it/s, Materializing param=encoder.layer.3.output.dense.bias]Loading weights:  67%|######6   | 69/103 [00:00<00:00, 1583.01it/s, Materializing param=encoder.layer.3.output.dense.weight]Loading weights:  67%|######6   | 69/103 [00:00<00:00, 1581.00it/s, Materializing param=encoder.layer.3.output.dense.weight]Loading weights:  68%|######7   | 70/103 [00:00<00:00, 1600.49it/s, Materializing param=encoder.layer.4.attention.output.LayerNorm.bias]Loading weights:  68%|######7   | 70/103 [00:00<00:00, 1598.60it/s, Materializing param=encoder.layer.4.attention.output.LayerNorm.bias]Loading weights:  69%|######8   | 71/103 [00:00<00:00, 1617.86it/s, Materializing param=encoder.layer.4.attention.output.LayerNorm.weight]Loading weights:  69%|######8   | 71/103 [00:00<00:00, 1616.09it/s, Materializing param=encoder.layer.4.attention.output.LayerNorm.weight]Loading weights:  70%|######9   | 72/103 [00:00<00:00, 1635.60it/s, Materializing param=encoder.layer.4.attention.output.dense.bias]      Loading weights:  70%|######9   | 72/103 [00:00<00:00, 1633.81it/s, Materializing param=encoder.layer.4.attention.output.dense.bias]Loading weights:  71%|#######   | 73/103 [00:00<00:00, 1653.31it/s, Materializing param=encoder.layer.4.attention.output.dense.weight]Loading weights:  71%|#######   | 73/103 [00:00<00:00, 1651.57it/s, Materializing param=encoder.layer.4.attention.output.dense.weight]Loading weights:  72%|#######1  | 74/103 [00:00<00:00, 1670.98it/s, Materializing param=encoder.layer.4.attention.self.key.bias]      Loading weights:  72%|#######1  | 74/103 [00:00<00:00, 1669.25it/s, Materializing param=encoder.layer.4.attention.self.key.bias]Loading weights:  73%|#######2  | 75/103 [00:00<00:00, 1688.59it/s, Materializing param=encoder.layer.4.attention.self.key.weight]Loading weights:  73%|#######2  | 75/103 [00:00<00:00, 1686.83it/s, Materializing param=encoder.layer.4.attention.self.key.weight]Loading weights:  74%|#######3  | 76/103 [00:00<00:00, 1706.14it/s, Materializing param=encoder.layer.4.attention.self.query.bias]Loading weights:  74%|#######3  | 76/103 [00:00<00:00, 1704.34it/s, Materializing param=encoder.layer.4.attention.self.query.bias]Loading weights:  75%|#######4  | 77/103 [00:00<00:00, 1723.52it/s, Materializing param=encoder.layer.4.attention.self.query.weight]Loading weights:  75%|#######4  | 77/103 [00:00<00:00, 1721.71it/s, Materializing param=encoder.layer.4.attention.self.query.weight]Loading weights:  76%|#######5  | 78/103 [00:00<00:00, 1740.79it/s, Materializing param=encoder.layer.4.attention.self.value.bias]  Loading weights:  76%|#######5  | 78/103 [00:00<00:00, 1738.97it/s, Materializing param=encoder.layer.4.attention.self.value.bias]Loading weights:  77%|#######6  | 79/103 [00:00<00:00, 1756.32it/s, Materializing param=encoder.layer.4.attention.self.value.weight]Loading weights:  77%|#######6  | 79/103 [00:00<00:00, 1753.93it/s, Materializing param=encoder.layer.4.attention.self.value.weight]Loading weights:  78%|#######7  | 80/103 [00:00<00:00, 1772.38it/s, Materializing param=encoder.layer.4.intermediate.dense.bias]    Loading weights:  78%|#######7  | 80/103 [00:00<00:00, 1770.45it/s, Materializing param=encoder.layer.4.intermediate.dense.bias]Loading weights:  79%|#######8  | 81/103 [00:00<00:00, 1789.11it/s, Materializing param=encoder.layer.4.intermediate.dense.weight]Loading weights:  79%|#######8  | 81/103 [00:00<00:00, 1787.17it/s, Materializing param=encoder.layer.4.intermediate.dense.weight]Loading weights:  80%|#######9  | 82/103 [00:00<00:00, 1805.85it/s, Materializing param=encoder.layer.4.output.LayerNorm.bias]    Loading weights:  80%|#######9  | 82/103 [00:00<00:00, 1803.92it/s, Materializing param=encoder.layer.4.output.LayerNorm.bias]Loading weights:  81%|########  | 83/103 [00:00<00:00, 1822.45it/s, Materializing param=encoder.layer.4.output.LayerNorm.weight]Loading weights:  81%|########  | 83/103 [00:00<00:00, 1820.56it/s, Materializing param=encoder.layer.4.output.LayerNorm.weight]Loading weights:  82%|########1 | 84/103 [00:00<00:00, 1837.65it/s, Materializing param=encoder.layer.4.output.dense.bias]      Loading weights:  82%|########1 | 84/103 [00:00<00:00, 1835.55it/s, Materializing param=encoder.layer.4.output.dense.bias]Loading weights:  83%|########2 | 85/103 [00:00<00:00, 1853.71it/s, Materializing param=encoder.layer.4.output.dense.weight]Loading weights:  83%|########2 | 85/103 [00:00<00:00, 1851.59it/s, Materializing param=encoder.layer.4.output.dense.weight]Loading weights:  83%|########3 | 86/103 [00:00<00:00, 1869.75it/s, Materializing param=encoder.layer.5.attention.output.LayerNorm.bias]Loading weights:  83%|########3 | 86/103 [00:00<00:00, 1867.56it/s, Materializing param=encoder.layer.5.attention.output.LayerNorm.bias]Loading weights:  84%|########4 | 87/103 [00:00<00:00, 1885.24it/s, Materializing param=encoder.layer.5.attention.output.LayerNorm.weight]Loading weights:  84%|########4 | 87/103 [00:00<00:00, 1883.04it/s, Materializing param=encoder.layer.5.attention.output.LayerNorm.weight]Loading weights:  85%|########5 | 88/103 [00:00<00:00, 1900.71it/s, Materializing param=encoder.layer.5.attention.output.dense.bias]      Loading weights:  85%|########5 | 88/103 [00:00<00:00, 1898.35it/s, Materializing param=encoder.layer.5.attention.output.dense.bias]Loading weights:  86%|########6 | 89/103 [00:00<00:00, 1915.86it/s, Materializing param=encoder.layer.5.attention.output.dense.weight]Loading weights:  86%|########6 | 89/103 [00:00<00:00, 1913.63it/s, Materializing param=encoder.layer.5.attention.output.dense.weight]Loading weights:  87%|########7 | 90/103 [00:00<00:00, 1931.02it/s, Materializing param=encoder.layer.5.attention.self.key.bias]      Loading weights:  87%|########7 | 90/103 [00:00<00:00, 1928.79it/s, Materializing param=encoder.layer.5.attention.self.key.bias]Loading weights:  88%|########8 | 91/103 [00:00<00:00, 1946.23it/s, Materializing param=encoder.layer.5.attention.self.key.weight]Loading weights:  88%|########8 | 91/103 [00:00<00:00, 1943.91it/s, Materializing param=encoder.layer.5.attention.self.key.weight]Loading weights:  89%|########9 | 92/103 [00:00<00:00, 1961.12it/s, Materializing param=encoder.layer.5.attention.self.query.bias]Loading weights:  89%|########9 | 92/103 [00:00<00:00, 1957.33it/s, Materializing param=encoder.layer.5.attention.self.query.bias]Loading weights:  90%|######### | 93/103 [00:00<00:00, 1973.83it/s, Materializing param=encoder.layer.5.attention.self.query.weight]Loading weights:  90%|######### | 93/103 [00:00<00:00, 1971.44it/s, Materializing param=encoder.layer.5.attention.self.query.weight]Loading weights:  91%|#########1| 94/103 [00:00<00:00, 1988.36it/s, Materializing param=encoder.layer.5.attention.self.value.bias]  Loading weights:  91%|#########1| 94/103 [00:00<00:00, 1985.89it/s, Materializing param=encoder.layer.5.attention.self.value.bias]Loading weights:  92%|#########2| 95/103 [00:00<00:00, 2002.75it/s, Materializing param=encoder.layer.5.attention.self.value.weight]Loading weights:  92%|#########2| 95/103 [00:00<00:00, 2000.27it/s, Materializing param=encoder.layer.5.attention.self.value.weight]Loading weights:  93%|#########3| 96/103 [00:00<00:00, 2017.02it/s, Materializing param=encoder.layer.5.intermediate.dense.bias]    Loading weights:  93%|#########3| 96/103 [00:00<00:00, 2014.67it/s, Materializing param=encoder.layer.5.intermediate.dense.bias]Loading weights:  94%|#########4| 97/103 [00:00<00:00, 2031.51it/s, Materializing param=encoder.layer.5.intermediate.dense.weight]Loading weights:  94%|#########4| 97/103 [00:00<00:00, 2029.11it/s, Materializing param=encoder.layer.5.intermediate.dense.weight]Loading weights:  95%|#########5| 98/103 [00:00<00:00, 2045.71it/s, Materializing param=encoder.layer.5.output.LayerNorm.bias]    Loading weights:  95%|#########5| 98/103 [00:00<00:00, 2043.31it/s, Materializing param=encoder.layer.5.output.LayerNorm.bias]Loading weights:  96%|#########6| 99/103 [00:00<00:00, 2059.74it/s, Materializing param=encoder.layer.5.output.LayerNorm.weight]Loading weights:  96%|#########6| 99/103 [00:00<00:00, 2057.25it/s, Materializing param=encoder.layer.5.output.LayerNorm.weight]Loading weights:  97%|#########7| 100/103 [00:00<00:00, 2071.06it/s, Materializing param=encoder.layer.5.output.dense.bias]     Loading weights:  97%|#########7| 100/103 [00:00<00:00, 2068.25it/s, Materializing param=encoder.layer.5.output.dense.bias]Loading weights:  98%|#########8| 101/103 [00:00<00:00, 2084.46it/s, Materializing param=encoder.layer.5.output.dense.weight]Loading weights:  98%|#########8| 101/103 [00:00<00:00, 2081.92it/s, Materializing param=encoder.layer.5.output.dense.weight]Loading weights:  99%|#########9| 102/103 [00:00<00:00, 2098.16it/s, Materializing param=pooler.dense.bias]                  Loading weights:  99%|#########9| 102/103 [00:00<00:00, 2095.70it/s, Materializing param=pooler.dense.bias]Loading weights: 100%|##########| 103/103 [00:00<00:00, 2111.99it/s, Materializing param=pooler.dense.weight]Loading weights: 100%|##########| 103/103 [00:00<00:00, 2109.59it/s, Materializing param=pooler.dense.weight]Loading weights: 100%|##########| 103/103 [00:00<00:00, 2102.48it/s, Materializing param=pooler.dense.weight]
+[1mBertModel LOAD REPORT[0m from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+OpenRouter error 404 on deepseek/deepseek-v4-flash-0731:free: {"error":{"message":"This model is unavailable for free. The paid version is available now - use this slug instead: deepseek/deepseek-v4-flash-0731","code":404},"user_id":"user_3I3kPq2h63b6x8Zlpb9mMwSaz0Y"}
+Generation failed on OpenRouterProvider: OpenRouter generation timed out or failed (None). Trying fallback...
+INFO:     127.0.0.1:61426 - "POST /api/brain/ask HTTP/1.1" 200 OK
+OpenRouter error 404 on deepseek/deepseek-v4-flash-0731:free: {"error":{"message":"This model is unavailable for free. The paid version is available now - use this slug instead: deepseek/deepseek-v4-flash-0731","code":404},"user_id":"user_3I3kPq2h63b6x8Zlpb9mMwSaz0Y"}
+Generation failed on OpenRouterProvider: OpenRouter generation timed out or failed (None). Trying fallback...
+INFO:     127.0.0.1:54578 - "POST /api/brain/ask HTTP/1.1" 200 OK
+OpenRouter error 404 on deepseek/deepseek-v4-flash-0731:free: {"error":{"message":"This model is unavailable for free. The paid version is available now - use this slug instead: deepseek/deepseek-v4-flash-0731","code":404},"user_id":"user_3I3kPq2h63b6x8Zlpb9mMwSaz0Y"}
+Generation failed on OpenRouterProvider: OpenRouter generation timed out or failed (None). Trying fallback...
+INFO:     127.0.0.1:50720 - "POST /api/brain/ask HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55474 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55474 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62789 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62789 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53342 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53342 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62871 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62871 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+OpenRouter error 404 on deepseek/deepseek-v4-flash-0731:free: {"error":{"message":"This model is unavailable for free. The paid version is available now - use this slug instead: deepseek/deepseek-v4-flash-0731","code":404},"user_id":"user_3I3kPq2h63b6x8Zlpb9mMwSaz0Y"}
+INFO:     Started server process [29412]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+OpenRouter error 404 on deepseek/deepseek-v4-flash-0731:free: {"error":{"message":"This model is unavailable for free. The paid version is available now - use this slug instead: deepseek/deepseek-v4-flash-0731","code":404},"user_id":"user_3I3kPq2h63b6x8Zlpb9mMwSaz0Y"}
+INFO:     127.0.0.1:62605 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62605 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55124 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55124 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55124 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55124 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55124 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55124 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49894 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49894 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50390 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62309 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62309 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62309 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62309 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62309 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62309 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     Started server process [2748]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:54802 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54802 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57966 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56739 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56739 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56739 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56739 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63839 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63839 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58104 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     Started server process [10292]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:59258 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59258 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55363 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55363 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+OpenRouter error 404 on deepseek/deepseek-v4-flash-0731:free: {"error":{"message":"This model is unavailable for free. The paid version is available now - use this slug instead: deepseek/deepseek-v4-flash-0731","code":404},"user_id":"user_3I3kPq2h63b6x8Zlpb9mMwSaz0Y"}
+INFO:     127.0.0.1:63358 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63358 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63358 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     Started server process [13460]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     Started server process [15728]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:54345 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54345 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58272 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57274 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62866 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     Started server process [5328]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:63376 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63376 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63766 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60643 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60643 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60643 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57330 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58832 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58832 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58832 - "POST /api/groups HTTP/1.1" 201 Created
+INFO:     127.0.0.1:64049 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64049 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64049 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64049 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52597 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51296 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     Started server process [33356]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:58687 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58687 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52717 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52717 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52717 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54728 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54728 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54728 - "POST /api/groups HTTP/1.1" 201 Created
+INFO:     Started server process [5888]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:58019 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58019 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57643 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57643 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59062 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59062 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57408 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61034 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61034 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61034 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61034 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61034 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51596 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51596 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51596 - "POST /api/groups HTTP/1.1" 201 Created
+INFO:     127.0.0.1:51596 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51596 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     Started server process [12808]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:52912 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52912 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50879 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50879 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50879 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+^CINFO:     Started server process [39744]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)
+INFO:     127.0.0.1:56864 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56864 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60275 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60275 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64022 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64022 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49384 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57671 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49384 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64752 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64752 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62198 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62198 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+OpenRouter error 404 on deepseek/deepseek-v4-flash-0731:free: {"error":{"message":"This model is unavailable for free. The paid version is available now - use this slug instead: deepseek/deepseek-v4-flash-0731","code":404},"user_id":"user_3I3kPq2h63b6x8Zlpb9mMwSaz0Y"}
+INFO:     127.0.0.1:64024 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64024 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57814 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57814 - "POST /api/pages/save-bulk HTTP/1.1" 200 OK
+OpenRouter error 404 on deepseek/deepseek-v4-flash-0731:free: {"error":{"message":"This model is unavailable for free. The paid version is available now - use this slug instead: deepseek/deepseek-v4-flash-0731","code":404},"user_id":"user_3I3kPq2h63b6x8Zlpb9mMwSaz0Y"}
+INFO:     127.0.0.1:56578 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56578 - "GET /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61719 - "GET /api/pages?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49954 - "GET /api/pages?limit=300 HTTP/1.1" 200 OK
+INFO:     Started server process [16352]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8742 (Press CTRL+C to quit)

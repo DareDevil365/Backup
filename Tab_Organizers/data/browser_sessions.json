@@ -1,0 +1,33 @@
+[
+  {
+    "session_id": "session_2",
+    "closed_at": 1789850039423.747,
+    "window_count": 1,
+    "total_tab_count": 2,
+    "title_preview": "Single Window",
+    "windows": [
+      {
+        "window_index": 0,
+        "tabs": [
+          {
+            "title": "Github",
+            "url": "https://github.com",
+            "favIconUrl": null,
+            "groupId": null,
+            "groupTitle": null,
+            "groupColor": null
+          },
+          {
+            "title": "Arxiv",
+            "url": "https://arxiv.org",
+            "favIconUrl": null,
+            "groupId": null,
+            "groupTitle": null,
+            "groupColor": null
+          }
+        ],
+        "groups": []
+      }
+    ]
+  }
+]

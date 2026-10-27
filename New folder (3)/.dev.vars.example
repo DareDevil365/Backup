@@ -1,0 +1,20 @@
+# Discord Webhook URL (Create in your Discord Server -> Channel Settings -> Integrations -> Webhooks)
+DISCORD_WEBHOOK_URL="https://discord.com/api/webhooks/your_webhook_id/your_webhook_token"
+
+# Optional: Ping everyone or a specific user on Discord (e.g., "@everyone" or "<@YOUR_DISCORD_USER_ID>")
+DISCORD_PING="@everyone"
+
+# -------------------------------------------------------------
+# Optional WhatsApp Notifications
+# -------------------------------------------------------------
+
+# Method 1: CallMeBot (FREE, Zero server hosting required)
+# 1. Add CallMeBot to WhatsApp: message "+34 911 06 14 37" with "I allow callmebot to send me messages"
+# 2. You will receive your API key instantly.
+# CALLMEBOT_PHONE="+919876543210"
+# CALLMEBOT_API_KEY="123456"
+
+# Method 2: OpenWA (Self-hosted WhatsApp Gateway: https://github.com/rmyndharis/OpenWA)
+# OPENWA_API_URL="https://your-openwa-server.domain.com"
+# OPENWA_API_KEY="your_openwa_api_key"
+# OPENWA_PHONE="919876543210"

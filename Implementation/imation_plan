@@ -1,0 +1,110 @@
+# Comprehensive Audit & Elimination of Mock/Junk Data + Real-Data Pipeline Fixes
+
+This implementation plan addresses all junk data, fake fallbacks, hardcoded numbers, and data pipeline bugs across the backend and frontend.
+
+## User Review Required
+
+> [!IMPORTANT]
+> **Strict "No Mock / Real Data Only" Policy:**
+> Moving forward, if live real-time market data or financial statements cannot be fetched from Yahoo Finance / NSE exchange sources for a given ticker or query:
+> 1. The system will **NEVER** return silent estimated/fake default values (e.g. Price ₹2,500, P/E 22.5x, P/B 3.2x, ISIN `INE000000000`).
+> 2. The system will return a clean HTTP 404 / 503 response or explicit `data_source: "unavailable"` state, informing the user that real-time data for the requested stock is unavailable.
+
+> [!NOTE]
+> **Symbol Resolution for Zomato / Eternal Limited:**
+> Zomato Ltd officially rebranded its corporate parent entity to **Eternal Limited**. `NSE_MASTER_LIST` and search logic will be updated to handle `ETERNAL`, `ETERNAL.NS`, `ZOMATO`, and `ZOMATO.NS` seamlessly with real live data fetching.
+
+---
+
+## Root Causes Identified
+
+1. **Fake Default Dictionary in `data_fetcher.py`**:
+   - `get_company_profile()` initialized profile attributes with hardcoded fake numbers (`pe: 22.5`, `pb: 3.2`, `roe: 15.0`, `roce: 17.5`, `debt_equity: 0.45`, `div_yield: 1.2`, `isin: "INE000000000"`, `current_price: 2500.0`).
+   - When yfinance failed (rate limit, symbol lookup error, network timeout), the function caught the exception and returned this fake dictionary.
+
+2. **Snowflake Radar Score 34/30 Bug**:
+   - `compute_snowflake_scores()` returns `{"value": 2, "future": 3, "past": 3, "health": 5, "dividend": 4, "total": 17}`.
+   - `SnowflakeChart.tsx` performed `Object.values(scores).reduce((a, b) => a + b, 0)`, which summed the 5 pillar scores PLUS the `"total"` property `(2 + 3 + 3 + 5 + 4 + 17 = 34)`, displaying an invalid score of **34 / 30**.
+
+3. **Sector Peer Matrix Showing Identical Fake Ratios & Blank Price (`₹`)**:
+   - `PeerComparison.tsx` referenced `p.price`, but the backend returned `p.current_price`. This caused prices to render as blank `₹`.
+   - Missing yfinance metadata caused all failed stocks to default to sector `"NSE Equity"`, grouping unrelated stocks together with identical fallback numbers.
+
+4. **Synthetic Financial Statements, Shareholding, and Concall Summaries**:
+   - `get_company_financials()` and `get_company_shareholding()` constructed fake synthetic CAGR rows when yfinance failed.
+   - `pseudo_brain.py` hardcoded fake announcements ("2026-07-20") and concall takeaways for all tickers.
+   - `research.py`, `behavior.py`, and `watchlist.py` returned hardcoded `SAMPLE_LEADERBOARD`, `SAMPLE_INSIDER_TRADES`, and `SAMPLE_TRADES`.
+
+---
+
+## Proposed Changes
+
+### Component 1: Data Fetching Engine (`backend/services/data_fetcher.py`)
+
+#### [MODIFY] [data_fetcher.py](file:///c:/Users/yasha/Desktop/Saarthi/backend/services/data_fetcher.py)
+- Remove all hardcoded default fallback values (`current_price: 2500`, `pe: 22.5`, `isin: "INE000000000"`, etc.).
+- When yfinance is queried, populate values strictly from `info`. If yfinance fails or key metrics are missing, raise an exception or mark missing attributes as `None`.
+- For `get_company_financials()`: If yfinance has no structured financial statements for the ticker, return `data_source: "unavailable"` with empty arrays instead of fake calculated rows.
+- For `get_company_shareholding()`: Extract real major holders/insiders from `yf.Ticker(ticker).major_holders` or `insider_purchases` where available; return `data_source: "unavailable"` if unavailable.
+
+---
+
+### Component 2: NSE Stock Master & Symbol Lookup (`backend/services/nse_stock_master.py`)
+
+#### [MODIFY] [nse_stock_master.py](file:///c:/Users/yasha/Desktop/Saarthi/backend/services/nse_stock_master.py)
+- Update `NSE_MASTER_LIST` to include `ETERNAL.NS` (Eternal Limited / Zomato) alongside `ZOMATO.NS`.
+- Implement ticker alias lookup so searching `ZOMATO` or `ETERNAL` maps cleanly to real exchange tickers.
+- Standardize stock details so real sector and industry metadata are preserved.
+
+---
+
+### Component 3: Screener Engine & Peer Comparison (`backend/services/screener_engine.py`)
+
+#### [MODIFY] [screener_engine.py](file:///c:/Users/yasha/Desktop/Saarthi/backend/services/screener_engine.py)
+- Filter out stocks that lack live data from peer benchmarking.
+- Include proper sector matching based on verified industry classifications.
+
+---
+
+### Component 4: Research, Behavior & Watchlist Routers
+
+#### [MODIFY] [pseudo_brain.py](file:///c:/Users/yasha/Desktop/Saarthi/backend/services/pseudo_brain.py)
+- Remove synthetic fake announcements with hardcoded future dates.
+- Query real NSE/BSE corporate announcement feeds or return empty list with clear "No recent announcements" message if unavailable.
+
+#### [MODIFY] [research.py](file:///c:/Users/yasha/Desktop/Saarthi/backend/routers/research.py)
+- Remove `SAMPLE_LEADERBOARD` and `SAMPLE_INSIDER_TRADES`. Return real user-generated data or empty response with appropriate message.
+
+#### [MODIFY] [behavior.py](file:///c:/Users/yasha/Desktop/Saarthi/backend/routers/behavior.py)
+- Remove `SAMPLE_TRADES` fallback. Require user trade CSV input for behavioral analysis.
+
+#### [MODIFY] [watchlist.py](file:///c:/Users/yasha/Desktop/Saarthi/backend/routers/watchlist.py)
+- Remove hardcoded default watchlist items and fake alert triggers.
+
+---
+
+### Component 5: Frontend UI Fixes
+
+#### [MODIFY] [SnowflakeChart.tsx](file:///c:/Users/yasha/Desktop/Saarthi/frontend/src/components/ShareholdingChart.tsx)
+- Fix total score calculation: Sum only the 5 pillar scores (`value + future + past + health + dividend`) or read `scores.total` directly. Do NOT run `Object.values()` over the object containing the `total` property.
+
+#### [MODIFY] [PeerComparison.tsx](file:///c:/Users/yasha/Desktop/Saarthi/frontend/src/components/PeerComparison.tsx)
+- Fix price accessor: change `p.price` to `p.current_price ?? p.price`.
+- Render cleanly formatted missing value indicators (`N/A`) when individual metrics are not reported by exchange sources.
+
+#### [MODIFY] [page.tsx](file:///c:/Users/yasha/Desktop/Saarthi/frontend/src/app/stock/%5Bticker%5D/page.tsx)
+- Ensure clean error screens with user-friendly retry buttons when real market data is unavailable.
+
+---
+
+## Verification Plan
+
+### Automated Tests
+- Run python backend tests (`pytest` or `test_backend.py`) to verify API responses return real values or 404/503 errors when data is unavailable.
+- Test `compute_snowflake_scores()` with valid and missing input data to ensure total score is bounded `[0, 30]`.
+
+### Manual Verification
+- Test browsing `ZOMATO.NS` and `ETERNAL.NS` in the browser app.
+- Confirm Snowflake score displays accurately (e.g. `17 / 30`) instead of `34 / 30`.
+- Verify Sector Peer Benchmarking Matrix displays actual prices (`₹254.50`) and real sector peers without repeated fake ratios.
+- Confirm no fake announcements or synthetic dates appear in the Research Digest tab.

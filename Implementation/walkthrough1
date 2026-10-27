@@ -1,0 +1,24 @@
+# Walkthrough — Unified Scraper Integration
+
+We have integrated all three scraper implementations (local standard, local stealth, and cloud Browserbase) into a single, cohesive, smart-routing module at [scraper.py](file:///c:/Users/yasha/Desktop/scout/engine/scraper.py).
+
+## Changes Made
+
+### 1. Unified Scraper Interface
+*   **Smart-Routing Fallback Chain:** The `fetch_page` function now accepts `method="auto"`. It attempts local `"stealth"` scraping first. If a bot check/block screen (like Cloudflare, Captcha, or Access Denied) is detected, it automatically falls back to `"browserbase"` (cloud CDP session) if `BROWSERBASE_API_KEY` is present. Otherwise, it falls back to local `"standard"` Playwright.
+*   **Local Browser Context Sharing:** Standard and Stealth scrapers now share a single background Chromium process/event loop, significantly saving system memory and CPU overhead.
+*   **Media Configuration:** Introduced `block_media=True/False` so callers can toggle media resource blocking (helpful if visual image assets are needed).
+*   **Popup & Scroll Optimization:** Cleaned up and combined pop-up dismissals and scroll helpers into consolidated local routines.
+
+### 2. Import Cleanup
+*   Updated imports in [deep_extractor.py](file:///c:/Users/yasha/Desktop/scout/engine/deep_extractor.py) to reference [scraper.py](file:///c:/Users/yasha/Desktop/scout/engine/scraper.py).
+*   Deleted the obsolete and redundant files: `scraper_stealth.py` and `scraper_browserbase.py`.
+
+---
+
+## Verification Results
+
+We verified standard, stealth, and auto routing configurations using a test script [scratch/test_unified.py](file:///c:/Users/yasha/Desktop/scout/scratch/test_unified.py):
+*   **Standard Mode:** Verified successful HTML/Markdown extraction from static pages (e.g. `example.com`).
+*   **Stealth Mode:** Verified successful loading of dynamic, JavaScript-rendered content (e.g. `quotes.toscrape.com/js/`) under mocked headers and custom scrolling.
+*   **Auto Routing:** Verified automated fallback selection and successful execution.

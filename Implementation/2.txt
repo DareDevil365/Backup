@@ -1,0 +1,213 @@
+# skill.md â€” Long-Running Multi-Key Gemini Research Orchestration
+
+> **Scope.** This file governs the *whole run*: key/model management, taskâ†’model
+> routing, quota behavior, persistence, and final synthesis. Source discovery,
+> prioritization, and quality control live in the companion file
+> **`Selection_discovery.md`** (Stage 2). The two interlock at the budget, tier,
+> and persistence contracts defined here.
+
+---
+
+## 0. Prime Directive
+
+**Complete the task correctly. Run until the work is done, saturated, or clearly
+not worth continuing â€” not until a clock runs out.**
+
+Time is a *consequence* of the work, never a constraint on it. There is no
+`T_total`, no wall-clock pacing, no "ride the 40-minute window" logic. The system
+runs as fast as the quota allows, sleeps exactly as long as a real `429` cooldown
+demands, and stops on **completion**, **saturation**, or a **justified effort
+ceiling** (Â§3.4).
+
+The only fixed times in the entire system are **per-call / per-job timeouts**
+(Â§4.1) â€” a hung call is wrong regardless of how long the overall run takes.
+
+---
+
+## 1. Inputs (Stage 1)
+
+Captured once, at the start, into `run_config.json`:
+
+| Field | Meaning |
+|---|---|
+| `query` | The research brief (free text). |
+| `depth` | `surface` \| `standard` \| `deep` â€” scales fan-out & saturation thresholds. |
+| `output_spec` | Desired final artifact (report / table / sheet schema). |
+| `api_keys[]` | The available Gemini keys (here: **3 keys**). |
+| `buffer_pct` | Padding over the AI effort estimate for local slowness. Default **+40%**. |
+
+> **No duration field.** Duration is *estimated* (Â§3) and *capped* (Â§3.4), never *input*.
+
+---
+
+## 2. Keys & Models
+
+### 2.1 Three-key rotation
+- Treat the 3 keys as a **pool of quota cells**: `(key Ã— model)` is the unit.
+- Round-robin across keys **within a tier**; never burn all 3 keys on one tier
+  before others are needed.
+- Track per-cell state: `available | cooling_down(until=ts) | exhausted_today`.
+- On `429`/quota error: mark that **cell** cooling-down with the cooldown the API
+  reports, rotate to the next available cell, **do not** sleep the whole pipeline.
+
+### 2.2 Model tiers
+| Tier | Use for | Cost posture |
+|---|---|---|
+| **Strong** | Query generation, source-intent classification, entity validation, final synthesis | Spend freely but bounded |
+| **Mid** | Structured extraction from a confirmed-good page | Moderate |
+| **Cheap** | Bulk scraping/cleanup, soft-404 detection, dedupe | Capped â€” never escalate scraping to Strong |
+
+**Downgrade ladder:** Strong â†’ Mid â†’ Cheap on repeated quota pressure for
+*non-judgment* tasks. **Judgment tasks never downgrade below Mid** â€” if Mid is
+exhausted across all keys, checkpoint and wait for reset (Â§9) rather than produce
+low-quality routing/synthesis on Cheap.
+
+---
+
+## 3. Effort Estimation & Budgeting (replaces all time-pacing)
+
+### 3.1 AI effort estimate (Stage 1, Strong model)
+Estimate workload in **units of work**, not minutes:
+```
+estimated_work = { sources_to_discover: N,
+                   pages_to_scrape:     M,
+                   synthesis_passes:    K }
+```
+Scaled by `depth`: surface â‰ˆ 3â€“5 queries / ~10 pages; deep â‰ˆ 20+ queries / 60+ pages.
+
+### 3.2 Budget as ratios of quota (never of time)
+- Reserve **~40% of Strong-tier daily capacity for final synthesis** before
+  spending the rest on discovery/extraction. This is a *quota ratio* and is
+  duration-agnostic.
+- Scraping draws **only** from Cheap-tier budget.
+
+### 3.3 Phases keyed to work completion, not the clock
+```
+parse  â†’  discover (Stage 2)  â†’  scrape + extract  â†’  synthesis
+```
+Each phase starts when the **prior phase completes**, not at a % of a timer.
+
+### 3.4 Soft effort ceiling + diminishing returns (the "not 10 hrs" guardrail)
+- **Soft ceiling:** if actual work exceeds `estimated_work Ã— (1 + buffer_pct)`,
+  the system does **not** charge on blindly. It **checkpoints**, writes the
+  partial result, and emits a *"still going, here's why"* note
+  (e.g. "found 3Ã— more relevant sources than estimated"). A long run must always
+  be a *justified* long run.
+- **Diminishing-returns cutoff:** stop discovering/scraping once new sources stop
+  adding new information (corroboration saturates). This is the *primary* stop
+  condition and caps duration far more meaningfully than any clock.
+
+---
+
+## 4. Reliability
+
+### 4.1 Timeouts (the ONLY fixed times)
+| Job type | Hard timeout |
+|---|---|
+| Scrape fetch | 20s navigate (matches observed `Page.goto` 20000ms failures) |
+| Cheap extraction call | 30s |
+| Mid extraction call | 60s |
+| Strong synthesis call | 120s |
+
+A hung call is killed and rerouted (different cell, or retry-once then mark
+`FAILED_RETRYABLE`). Timeouts are tied to **tier + task**, never to run length.
+
+### 4.2 Streaming
+Stream Strong-tier synthesis so partial output is captured even if the call dies
+mid-stream.
+
+### 4.3 Soft-404 & junk detection (cheap, before extraction)
+Catch these **before** they consume extraction budget â€” your run scraped 64
+pages but only **22 had pricing data**:
+- HTTP 404 / "Page not found" / "404 - File or directory not found".
+- Title/entity mismatch (see Â§5).
+- Off-domain drift (e.g. Smartr Logistics â†’ SmartRecruiters / SmartR learning /
+  translation pages must be rejected, not extracted).
+
+---
+
+## 5. Entity Validation (drift guard)
+
+Before any page enters extraction:
+1. Resolve the **canonical entity** (e.g. "Smartr Logistics" â†’ `smartr.in`, an
+   Indian B2B logistics carrier).
+2. Reject pages whose domain/title clearly belong to a **different entity**
+   (SmartRecruiters, `app.smartr.co` learning platform, Google Translate, Wiktionary).
+3. Reject **wrong-geography / wrong-business-model** matches when the brief is
+   geo/scope-specific (e.g. Pakistan-only carriers, B2B-only freight when seeking
+   1kg parcel rates) â€” record as `NOT_APPLICABLE` with the reason.
+
+---
+
+## 6. Quota Behavior (no wall-clock pacing)
+
+- **Throttle only on real cooldowns.** No `target_pace = calls / T_total`.
+- On `429`: sleep *only* the affected cell for *exactly* its reported cooldown,
+  rotate to the next available cell, keep working.
+- **Daily reset awareness:** if a worthwhile run exhausts the daily quota across
+  all 3 keys for the tier it needs, **checkpoint and resume at the next reset**
+  (Â§9) â€” this is the natural multi-day path, triggered by work, not by a setting.
+
+---
+
+## 7. Persistence (write-as-you-go; survive any crash)
+
+Everything lives in **one run folder**, written incrementally:
+```
+run_<id>/
+  run_config.json          # Stage 1 inputs + effort estimate
+  scrape_queue.json        # ranked best-first BEFORE scraping (from Stage 2)
+  sources_log.csv          # one row per URL touched (schema Â§8)
+  extracted/<company>.json # per-entity structured data, written as completed
+  partial_report.md        # rewritten at every checkpoint
+  final_report.md          # only when complete/saturated
+  state.json               # resumability cursor (Â§9)
+```
+**Persist partial files even on failure.** A crash at any point leaves a valid,
+inspectable folder with everything done so far.
+
+---
+
+## 8. Source Log Schema (per URL)
+
+Every URL touched gets a row â€” preserve your existing timestamping, add decision fields:
+
+```
+company, url, title, priority, authority_score, domain, tier,
+scrape_success, had_data, status, error_type, decision, timestamp
+```
+
+`status` taxonomy (replaces the blunt `PARTIAL/FAILED`):
+
+| status | meaning |
+|---|---|
+| `SUCCESS` | usable data extracted |
+| `PARTIAL` | some fields found, others missing |
+| `NO_PUBLIC_DATA` | real entity, but rates are login/quote-gated publicly |
+| `LOGIN_GATED` | requires merchant/business login to view |
+| `NOT_APPLICABLE` | wrong entity/geo/business-model (e.g. B2B-only, Pakistan-only) |
+| `SOFT_404` | page resolved but is a 404/placeholder |
+| `FAILED_RETRYABLE` | timeout/transient â€” eligible for one retry |
+| `FAILED` | exhausted retries |
+
+---
+
+## 9. Resumability
+
+`state.json` holds a cursor: which companies are done, which URLs remain, which
+quota cells are cooling. On restart (manual or post-reset):
+1. Reload the folder, skip anything already `SUCCESS`/`NO_PUBLIC_DATA`/`NOT_APPLICABLE`.
+2. **Never re-scrape** a settled URL.
+3. Continue from the queue head.
+
+---
+
+## 10. Per-Change Checklist
+
+- [ ] No new wall-clock pacing / `T_total` snuck in.S
+- [ ] Judgment tasks routed to Strong/Mid only.
+- [ ] Scraping capped to Cheap tier.
+- [ ] Soft-404 + entity validation run **before** extraction.
+- [ ] Every URL produces a log row with `status` + `decision`.
+- [ ] Partial files written at every checkpoint.
+- [ ] Effort ceiling + saturation cutoff present (the "not 10 hrs" guard).

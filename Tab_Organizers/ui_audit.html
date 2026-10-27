@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karl X — Redundancy & Duplicate Audit Report</title>
+  <link rel="stylesheet" href="extension/src/popup/popup.css">
+  <style>
+    body {
+      background: #0a0a0c;
+      color: #f4f4f5;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      margin: 0;
+      padding: 30px 40px 100px;
+      width: auto !important;
+      height: auto !important;
+      overflow: auto !important;
+    }
+    .audit-header {
+      max-width: 1200px;
+      margin: 0 auto 30px;
+      border-bottom: 1px solid #29292f;
+      padding-bottom: 20px;
+    }
+    .audit-header h1 {
+      font-size: 26px;
+      margin-bottom: 8px;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .audit-header p {
+      color: #9a9aa3;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .audit-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .audit-card {
+      background: #16161a;
+      border: 1px solid #29292f;
+      border-radius: 14px;
+      padding: 20px;
+      position: relative;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+    .audit-card-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .audit-card-desc {
+      font-size: 12.5px;
+      color: #9a9aa3;
+      margin-bottom: 16px;
+      line-height: 1.4;
+    }
+    .popup-frame {
+      width: 360px;
+      background: #0a0a0c;
+      border: 1px solid #29292f;
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 0 auto;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+      position: relative;
+    }
+    /* Highlight Callouts */
+    .highlight-box {
+      position: relative;
+      outline: 2px dashed #ef4444;
+      outline-offset: 3px;
+      border-radius: 6px;
+    }
+    .badge-pointer {
+      position: absolute;
+      top: -12px;
+      right: -8px;
+      background: #ef4444;
+      color: #ffffff;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 2px 7px;
+      border-radius: 999px;
+      box-shadow: 0 2px 8px rgba(239, 68, 68, 0.5);
+      z-index: 100;
+      pointer-events: none;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+    }
+    .breakdown-list {
+      margin-top: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .breakdown-item {
+      background: #1c1c21;
+      border-left: 3px solid #ef4444;
+      border-radius: 6px;
+      padding: 10px 12px;
+      font-size: 12px;
+    }
+    .breakdown-item.green {
+      border-left-color: #10b981;
+    }
+    .breakdown-item strong {
+      display: block;
+      color: #f4f4f5;
+      margin-bottom: 4px;
+      font-size: 13px;
+    }
+    .breakdown-item span {
+      color: #9a9aa3;
+      line-height: 1.4;
+      display: block;
+    }
+    .recommendation {
+      background: rgba(124, 92, 255, 0.12);
+      border: 1px solid rgba(124, 92, 255, 0.3);
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-top: 10px;
+      font-size: 12px;
+      color: #c4b5fd;
+    }
+    .recommendation strong {
+      color: #a78bfa;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="audit-header">
+    <h1>🔍 Karl X — Redundancy & "Extra Buttons" Audit Report</h1>
+    <p>Detailed verification of elements, actions, and buttons across the extension that perform the same work, cause UI congestion, or duplicate existing functionality.</p>
+  </div>
+
+  <div class="audit-grid">
+
+    <!-- Card 1: Library Mode "Double Save" & Footer Bloat -->
+    <div class="audit-card">
+      <div class="audit-card-title">
+        <span>1. Library View: Double "Save" Actions</span>
+        <span style="font-size:11px; background:#10b98126; color:#10b981; padding:2px 8px; border-radius:4px; font-weight:700;">RESOLVED</span>
+      </div>
+      <div class="audit-card-desc">
+        Removed the duplicate <code>[✦ Save Selected]</code> button from the footer. Tabs are now saved cleanly using the inline <code>(+)</code> button on each tab row, and tab selection is dedicated to grouping and export!
+      </div>
+
+      <div class="popup-frame">
+        <!-- Header -->
+        <header>
+          <div class="brand-mark"></div>
+          <div class="brand-name">Karl X</div>
+          <div class="status-dot connected"></div>
+          <div class="header-spacer"></div>
+          <div class="icon-btn">▤</div>
+        </header>
+
+        <!-- Segmented -->
+        <div class="segmented">
+          <div class="segment active">Library</div>
+          <div class="segment">Group</div>
+        </div>
+
+        <!-- Select Row -->
+        <div class="select-row">
+          <span class="link-btn">Select All</span>
+          <span class="sep">·</span>
+          <span class="link-btn">Deselect All</span>
+          <span class="count">2 / 4 tabs</span>
+        </div>
+
+        <!-- Open Tabs List -->
+        <div class="tab-list" style="padding: 0 16px 12px; display: flex; flex-direction: column; gap: 8px;">
+          
+          <div class="group-card" style="border-left-color: #f97316; background: linear-gradient(90deg, rgba(249,115,22,0.1) 0%, #16161a 45%); border: 1px solid #29292f; border-radius: 9px; overflow: hidden;">
+            <div class="group-header" style="padding: 8px 12px; display: flex; align-items: center; gap: 8px;">
+              <span style="font-weight: 700; color: #f97316; font-size: 12px;">Not Saved</span>
+              <span style="color: #6a6a72; font-size: 11px;">(2)</span>
+            </div>
+            <div style="padding-bottom: 6px;">
+              <div class="tab-item checked" style="display: flex; align-items: center; padding: 6px 12px; gap: 8px; background: rgba(124, 92, 255, 0.08);">
+                <img src="extension/public/icons/icon16.png" style="width: 14px; height: 14px;">
+                <span class="tab-title" style="flex: 1; font-size: 11.5px; color: #f4f4f5;">GitHub - deepmind/antigravity</span>
+                <!-- Highlight Point 1A -->
+                <div class="highlight-box">
+                  <span class="badge-pointer">A</span>
+                  <button class="btn-lib-action add" style="width: 20px; height: 20px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center;">
+                    <svg width="8" height="8" viewBox="0 0 10 10" fill="none"><path d="M5 1V9M1 5H9" stroke="#9a9aa3" stroke-width="2" stroke-linecap="round"/></svg>
+                  </button>
+                </div>
+              </div>
+              <div class="tab-item" style="display: flex; align-items: center; padding: 6px 12px; gap: 8px;">
+                <img src="extension/public/icons/icon16.png" style="width: 14px; height: 14px;">
+                <span class="tab-title" style="flex: 1; font-size: 11.5px; color: #9a9aa3;">YouTube - Research Paper Explained</span>
+                <button class="btn-lib-action add" style="width: 20px; height: 20px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center;">
+                  <svg width="8" height="8" viewBox="0 0 10 10" fill="none"><path d="M5 1V9M1 5H9" stroke="#9a9aa3" stroke-width="2" stroke-linecap="round"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Footer Controls -->
+        <div class="footer-controls" style="padding: 12px 16px; border-top: 1px solid #29292f; display: flex; flex-direction: column; gap: 8px;">
+          <!-- Highlight Point 1B -->
+          <div class="highlight-box">
+            <span class="badge-pointer">B</span>
+            <div style="display: flex; gap: 6px;">
+              <button class="cta-btn secondary" style="flex: 1; padding: 8px; font-size: 11.5px; background: linear-gradient(135deg, #7c5cff, #a78bfa); border: none; border-radius: 7px; color: #fff; font-weight: 700;">
+                ✦ Save Selected
+              </button>
+              <button class="cta-btn primary" style="flex: 1; padding: 8px; font-size: 11.5px; background: #1c1c21; border: 1px solid #29292f; border-radius: 7px; color: #9a9aa3;">
+                ⇩ Export HTML
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="breakdown-list">
+        <div class="breakdown-item">
+          <strong>Point A: Inline (+) Button</strong>
+          <span>Saves this single tab to Karl X Library immediately via API <code>POST /api/pages/save-bulk</code>.</span>
+        </div>
+        <div class="breakdown-item">
+          <strong>Point B: Bottom [✦ Save Selected] Button</strong>
+          <span>Saves the highlighted/checked tabs to Karl X Library via the exact same API. Users are presented with two competing ways to save the same open tabs.</span>
+        </div>
+        <div class="recommendation">
+          <strong>💡 Solution:</strong> Keep single-click on tab row to toggle selection and let <code>[✦ Save Selected]</code> handle batches, or make the inline button the sole action and remove the cluttered bottom bar.
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2: Stacked Recovery Banners -->
+    <div class="audit-card">
+      <div class="audit-card-title">
+        <span>2. Dual Session Recovery Banners</span>
+        <span style="font-size:11px; background:#f59e0b26; color:#f59e0b; padding:2px 8px; border-radius:4px; font-weight:700;">VISUAL OVERLAP</span>
+      </div>
+      <div class="audit-card-desc">
+        Two separate recovery banners appear at the top of the popup when starting up or after closing a window, offering almost identical reincarnation actions.
+      </div>
+
+      <div class="popup-frame">
+        <header>
+          <div class="brand-mark"></div>
+          <div class="brand-name">Karl X</div>
+          <div class="status-dot connected"></div>
+          <div class="header-spacer"></div>
+          <div class="icon-btn">▤</div>
+        </header>
+
+        <div class="segmented">
+          <div class="segment active">Library</div>
+          <div class="segment">Group</div>
+        </div>
+
+        <!-- Banner 1: Startup Session -->
+        <div class="highlight-box" style="margin: 0 16px 8px;">
+          <span class="badge-pointer">C</span>
+          <div class="closed-win-banner" style="display: flex; flex-direction: column; background: rgba(124, 92, 255, 0.12); border: 1px solid rgba(124, 92, 255, 0.3); border-radius: 8px; padding: 8px 10px; gap: 4px;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-size: 11px; font-weight: 700; color: #a78bfa;">✨ Previous Session Ready (14 tabs)</span>
+              <span style="font-size: 10px; color: #a78bfa;">4m left ✕</span>
+            </div>
+            <div style="display: flex; gap: 6px; margin-top: 4px;">
+              <button style="flex: 1; padding: 4px 8px; font-size: 10.5px; font-weight: 700; background: #7c5cff; border: none; border-radius: 5px; color: #fff;">✦ Reincarnate Session</button>
+              <button style="padding: 4px 8px; font-size: 10.5px; background: transparent; border: 1px solid #7c5cff; border-radius: 5px; color: #a78bfa;">All Sessions</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Banner 2: Closed Window -->
+        <div class="highlight-box" style="margin: 0 16px 12px;">
+          <span class="badge-pointer">D</span>
+          <div class="closed-win-banner" style="display: flex; flex-direction: column; background: rgba(53, 214, 196, 0.1); border: 1px solid rgba(53, 214, 196, 0.3); border-radius: 8px; padding: 8px 10px; gap: 4px;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-size: 11px; font-weight: 700; color: #35d6c4;">🪟 Closed Window (8 tabs)</span>
+              <span style="font-size: 10px; color: #35d6c4;">1m ago ✕</span>
+            </div>
+            <div style="display: flex; gap: 6px; margin-top: 4px;">
+              <button style="flex: 1; padding: 4px 8px; font-size: 10.5px; font-weight: 700; background: #0d9488; border: none; border-radius: 5px; color: #fff;">✦ Reincarnate</button>
+              <button style="padding: 4px 8px; font-size: 10.5px; background: transparent; border: 1px solid #0d9488; border-radius: 5px; color: #35d6c4;">History</button>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding: 10px 16px; font-size: 11px; color: #6a6a72; text-align: center;">
+          (Open tabs are pushed down below viewport)
+        </div>
+      </div>
+
+      <div class="breakdown-list">
+        <div class="breakdown-item">
+          <strong>Point C: Startup Browser Session Banner</strong>
+          <span>Offers "✦ Reincarnate Session" and "All Sessions" (which opens Dashboard).</span>
+        </div>
+        <div class="breakdown-item">
+          <strong>Point D: Closed Window Recovery Banner</strong>
+          <span>Offers "✦ Reincarnate" and "History" (which also opens Dashboard).</span>
+        </div>
+        <div class="recommendation">
+          <strong>💡 Solution:</strong> Merge into a single smart "Quick Recovery" pill that only shows the most recent closed session with a single Reincarnate trigger.
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3: Group View - Group Creation Redundancy -->
+    <div class="audit-card">
+      <div class="audit-card-title">
+        <span>3. Group View: Creation Duplication</span>
+        <span style="font-size:11px; background:#10b98126; color:#10b981; padding:2px 8px; border-radius:4px; font-weight:700;">CLEANED & ALIGNED</span>
+      </div>
+      <div class="audit-card-desc">
+        Previously, unsaved group cards had an orange circular <code>(+)</code> in the header AND a <code>[💾 Save as Group]</code> button right underneath.
+      </div>
+
+      <div class="popup-frame">
+        <header>
+          <div class="brand-mark"></div>
+          <div class="brand-name">Karl X</div>
+          <div class="status-dot connected"></div>
+          <div class="header-spacer"></div>
+          <div class="icon-btn">▤</div>
+        </header>
+
+        <div class="segmented">
+          <div class="segment">Library</div>
+          <div class="segment active">Group</div>
+        </div>
+
+        <!-- Group Subnav -->
+        <div class="group-subnav" style="display: flex; margin: 0 16px 12px;">
+          <div class="group-subtabs" style="display: flex; width: 100%; background: #16161a; border-radius: 9px; padding: 3px; border: 1px solid #29292f; gap: 6px;">
+            <div class="group-subtab" style="flex: 1; text-align: center; padding: 6px; font-size: 12px; font-weight: 600; color: #9a9aa3; border-radius: 7px; display: flex; align-items: center; justify-content: center; gap: 6px;">
+              <span>Saved</span>
+              <span class="subtab-badge" style="background: rgba(16, 185, 129, 0.2); color: #34d399; padding: 1px 7px; border-radius: 999px; font-size: 10px;">0</span>
+            </div>
+            <div class="group-subtab active" style="flex: 1; text-align: center; padding: 6px; font-size: 12px; font-weight: 600; color: #fb923c; background: rgba(249, 115, 22, 0.15); border: 1px solid rgba(249, 115, 22, 0.4); border-radius: 7px; display: flex; align-items: center; justify-content: center; gap: 6px;">
+              <span>Unsaved</span>
+              <span class="subtab-badge" style="background: #f97316; color: #fff; padding: 1px 7px; border-radius: 999px; font-size: 10px;">2</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding: 0 16px 14px; display: flex; flex-direction: column; gap: 10px;">
+          <!-- Unsaved Group Card -->
+          <div style="border-left: 4px solid #8ab4f8; background: linear-gradient(90deg, rgba(138, 180, 248, 0.14) 0%, #16161a 45%); border: 1px solid #29292f; border-radius: 10px; padding: 10px 12px;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+              <span style="font-weight: 700; color: #8ab4f8; font-size: 12.5px;">Research Project (2)</span>
+              <span style="font-size: 10.5px; background: rgba(249, 115, 22, 0.2); color: #fb923c; padding: 1px 6px; border-radius: 4px; font-weight: 600;">Unsaved</span>
+            </div>
+            <!-- Clean Action Row -->
+            <div style="display: flex; gap: 6px;">
+              <button style="flex: 1; padding: 5px 8px; font-size: 11px; font-weight: 700; color: #8ab4f8; border: 1px solid #8ab4f8; background: transparent; border-radius: 6px; cursor: pointer;">
+                💾 Save as Group
+              </button>
+              <button style="padding: 5px 8px; font-size: 11px; color: #9a9aa3; border: 1px solid #29292f; background: transparent; border-radius: 6px;">
+                ⇩ HTML
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="breakdown-list">
+        <div class="breakdown-item green">
+          <strong>Header (+) Removed Successfully</strong>
+          <span>The duplicate circular button in the card header was removed. The card header now stays uncluttered, while <code>[💾 Save as Group]</code> remains the sole primary button.</span>
+        </div>
+        <div class="breakdown-item green">
+          <strong>Subnav Restored to 50/50 Width</strong>
+          <span>Removing the extra "+ New Group" button next to Saved/Unsaved gave the switcher 160px+ of breathing space.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4: Dashboard Saved Groups vs Header -->
+    <div class="audit-card">
+      <div class="audit-card-title">
+        <span>4. Dashboard: Top Bar "+ New Group" vs Inline</span>
+        <span style="font-size:11px; background:#ef444426; color:#ef4444; padding:2px 8px; border-radius:4px; font-weight:700;">POTENTIAL OVERLAP</span>
+      </div>
+      <div class="audit-card-desc">
+        On the Dashboard <code>SavedGroups.tsx</code> page, the top action bar has a <code>+ New Group</code> modal button, while every unsaved group card also has <code>Save as Group</code>.
+      </div>
+
+      <div style="background: #0f0f11; border: 1px solid #29292f; border-radius: 10px; padding: 16px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #29292f; padding-bottom: 12px; margin-bottom: 12px;">
+          <div>
+            <h3 style="margin: 0; font-size: 16px;">Tab Groups</h3>
+            <span style="font-size: 11px; color: #9a9aa3;">Manage and restore your saved tab groups</span>
+          </div>
+          <!-- Highlight Point 4E -->
+          <div class="highlight-box">
+            <span class="badge-pointer">E</span>
+            <button style="background: linear-gradient(135deg, #7c5cff, #a78bfa); border: none; color: #fff; border-radius: 6px; padding: 6px 12px; font-size: 12px; font-weight: 700;">
+              + New Group
+            </button>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 10px; font-size: 12px; font-weight: 700; color: #9a9aa3; margin-bottom: 12px;">
+          <span style="color: #34d399; border-bottom: 2px solid #34d399; padding-bottom: 4px;">Saved (0)</span>
+          <span style="color: #fb923c; border-bottom: 2px solid #fb923c; padding-bottom: 4px;">Unsaved (2)</span>
+        </div>
+
+        <div style="background: #16161a; border: 1px solid #29292f; border-left: 4px solid #f97316; border-radius: 8px; padding: 12px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <span style="font-weight: 700; font-size: 13px; color: #f97316;">Work Tabs (3 tabs)</span>
+            <span style="font-size: 11px; color: #f97316; background: #f9731620; padding: 2px 6px; border-radius: 4px;">Active in Chrome</span>
+          </div>
+          <!-- Highlight Point 4F -->
+          <div class="highlight-box">
+            <span class="badge-pointer">F</span>
+            <button style="width: 100%; background: #f97316; border: none; color: #fff; border-radius: 6px; padding: 6px; font-size: 12px; font-weight: 700;">
+              💾 Save as Group
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="breakdown-list">
+        <div class="breakdown-item">
+          <strong>Point E: Top Bar [+ New Group]</strong>
+          <span>Opens a modal to manually pick from open tabs and save them as a new group.</span>
+        </div>
+        <div class="breakdown-item">
+          <strong>Point F: Card [💾 Save as Group]</strong>
+          <span>Saves existing Chrome groups directly into the saved collection.</span>
+        </div>
+        <div class="recommendation">
+          <strong>💡 Clarification:</strong> Point E creates a <em>new custom group</em> from scratch, while Point F converts an <em>existing Chrome group</em> into a Saved Group. If the user only wants groups created in Chrome, Point E is an extra button.
+        </div>
+      </div>
+    </div>
+
+    <!-- Audit Card 5: Multiverse Earth Window Bar Visual Check -->
+    <div class="audit-card" style="grid-column: 1 / -1;">
+      <div class="audit-card-title">
+        <span>5. Multiverse Earth Window Switcher (Visual Design & Halos)</span>
+        <span class="badge-redundant" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border-color: rgba(56, 189, 248, 0.4);">LIVE PREVIEW</span>
+      </div>
+      <div class="audit-card-desc">
+        Earth tabs with dedicated blue & red glowing halos, dark background matching <code>#0a0a0c</code>, inside-theme matching borders/glow/badges, and formfactor minimization swapping.
+      </div>
+
+      <div style="background: #0a0a0c; border: 1px solid #29292f; border-radius: 12px; padding: 16px; margin-top: 14px;">
+        <div style="font-size: 11px; font-weight: 600; color: #9a9aa3; text-transform: uppercase; margin-bottom: 10px; letter-spacing: 0.5px;">Active Bar (Background matched to #0a0a0c):</div>
+        <div class="earth-window-bar" style="background: #0a0a0c; border-bottom: 1px solid #29292f; border-radius: 8px; padding: 10px 14px; margin-bottom: 20px;">
+          <!-- Earth 616 (Active, Blue Theme with Blue Halo) -->
+          <div class="earth-tab theme-blue active" style="margin-right: 12px;">
+            <img class="earth-cube-icon" src="extension/public/icons/earth_active_clean.png" alt="Earth-616" />
+            <span class="earth-tab-name">Earth-616</span>
+            <span class="earth-tab-badge">7</span>
+          </div>
+
+          <!-- Earth 101 (Inactive, Red Theme with Red Halo) -->
+          <div class="earth-tab theme-red inactive">
+            <img class="earth-cube-icon" src="extension/public/icons/earth_barren_clean.png" alt="Earth-101" />
+            <span class="earth-tab-name">Earth-101</span>
+            <span class="earth-tab-badge">4</span>
+          </div>
+        </div>
+
+        <div style="font-size: 11px; font-weight: 600; color: #9a9aa3; text-transform: uppercase; margin-bottom: 10px; letter-spacing: 0.5px;">Alternate Active State (When Earth-101 is Selected):</div>
+        <div class="earth-window-bar" style="background: #0a0a0c; border-bottom: 1px solid #29292f; border-radius: 8px; padding: 10px 14px;">
+          <!-- Earth 616 (Inactive, Blue Theme) -->
+          <div class="earth-tab theme-blue inactive" style="margin-right: 12px;">
+            <img class="earth-cube-icon" src="extension/public/icons/earth_active_clean.png" alt="Earth-616" />
+            <span class="earth-tab-name">Earth-616</span>
+            <span class="earth-tab-badge">7</span>
+          </div>
+
+          <!-- Earth 101 (Active, Red Theme with Crimson Halo & Borders) -->
+          <div class="earth-tab theme-red active">
+            <img class="earth-cube-icon" src="extension/public/icons/earth_barren_clean.png" alt="Earth-101" />
+            <span class="earth-tab-name">Earth-101</span>
+            <span class="earth-tab-badge">4</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
